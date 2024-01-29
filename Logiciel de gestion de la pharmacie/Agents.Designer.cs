@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             ListeDesAgents = new Label();
             AjouterAgents = new Button();
             ModifierAgents = new Button();
@@ -81,12 +81,12 @@
             // 
             // AjouterAgents
             // 
-            AjouterAgents.BackColor = Color.ForestGreen;
+            AjouterAgents.BackColor = Color.OliveDrab;
             AjouterAgents.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             AjouterAgents.ForeColor = Color.White;
-            AjouterAgents.Location = new Point(401, 148);
+            AjouterAgents.Location = new Point(218, 26);
             AjouterAgents.Name = "AjouterAgents";
-            AjouterAgents.Size = new Size(90, 29);
+            AjouterAgents.Size = new Size(97, 32);
             AjouterAgents.TabIndex = 97;
             AjouterAgents.Text = "Ajouter";
             AjouterAgents.UseVisualStyleBackColor = false;
@@ -94,12 +94,12 @@
             // 
             // ModifierAgents
             // 
-            ModifierAgents.BackColor = Color.ForestGreen;
+            ModifierAgents.BackColor = Color.OliveDrab;
             ModifierAgents.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ModifierAgents.ForeColor = Color.White;
-            ModifierAgents.Location = new Point(497, 149);
+            ModifierAgents.Location = new Point(218, 85);
             ModifierAgents.Name = "ModifierAgents";
-            ModifierAgents.Size = new Size(83, 28);
+            ModifierAgents.Size = new Size(97, 31);
             ModifierAgents.TabIndex = 96;
             ModifierAgents.Text = "Modifier";
             ModifierAgents.UseVisualStyleBackColor = false;
@@ -107,12 +107,12 @@
             // 
             // SupprimerAgents
             // 
-            SupprimerAgents.BackColor = Color.ForestGreen;
+            SupprimerAgents.BackColor = Color.OliveDrab;
             SupprimerAgents.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SupprimerAgents.ForeColor = Color.White;
-            SupprimerAgents.Location = new Point(597, 149);
+            SupprimerAgents.Location = new Point(217, 135);
             SupprimerAgents.Name = "SupprimerAgents";
-            SupprimerAgents.Size = new Size(84, 28);
+            SupprimerAgents.Size = new Size(98, 32);
             SupprimerAgents.TabIndex = 95;
             SupprimerAgents.Text = "supprimer";
             SupprimerAgents.UseVisualStyleBackColor = false;
@@ -120,12 +120,12 @@
             // 
             // ReinitialiserAgents
             // 
-            ReinitialiserAgents.BackColor = Color.ForestGreen;
+            ReinitialiserAgents.BackColor = Color.OliveDrab;
             ReinitialiserAgents.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ReinitialiserAgents.ForeColor = Color.White;
-            ReinitialiserAgents.Location = new Point(696, 148);
+            ReinitialiserAgents.Location = new Point(217, 186);
             ReinitialiserAgents.Name = "ReinitialiserAgents";
-            ReinitialiserAgents.Size = new Size(98, 28);
+            ReinitialiserAgents.Size = new Size(98, 33);
             ReinitialiserAgents.TabIndex = 94;
             ReinitialiserAgents.Text = "Reinitialiser";
             ReinitialiserAgents.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             // 
             GenreAgent.FormattingEnabled = true;
             GenreAgent.Items.AddRange(new object[] { "M", "F" });
-            GenreAgent.Location = new Point(696, 103);
+            GenreAgent.Location = new Point(785, 106);
             GenreAgent.Name = "GenreAgent";
             GenreAgent.Size = new Size(121, 23);
             GenreAgent.TabIndex = 93;
@@ -143,8 +143,9 @@
             // TextTelephoneAgents
             // 
             TextTelephoneAgents.AutoSize = true;
-            TextTelephoneAgents.BackColor = SystemColors.Control;
-            TextTelephoneAgents.Location = new Point(535, 82);
+            TextTelephoneAgents.BackColor = Color.OliveDrab;
+            TextTelephoneAgents.ForeColor = Color.White;
+            TextTelephoneAgents.Location = new Point(624, 85);
             TextTelephoneAgents.Name = "TextTelephoneAgents";
             TextTelephoneAgents.Size = new Size(61, 15);
             TextTelephoneAgents.TabIndex = 92;
@@ -153,8 +154,9 @@
             // TextDateDeNaissanceAgent
             // 
             TextDateDeNaissanceAgent.AutoSize = true;
-            TextDateDeNaissanceAgent.BackColor = SystemColors.Control;
-            TextDateDeNaissanceAgent.Location = new Point(399, 82);
+            TextDateDeNaissanceAgent.BackColor = Color.OliveDrab;
+            TextDateDeNaissanceAgent.ForeColor = Color.White;
+            TextDateDeNaissanceAgent.Location = new Point(488, 85);
             TextDateDeNaissanceAgent.Name = "TextDateDeNaissanceAgent";
             TextDateDeNaissanceAgent.Size = new Size(103, 15);
             TextDateDeNaissanceAgent.TabIndex = 90;
@@ -162,7 +164,7 @@
             // 
             // NomAgent
             // 
-            NomAgent.Location = new Point(224, 103);
+            NomAgent.Location = new Point(324, 106);
             NomAgent.Name = "NomAgent";
             NomAgent.Size = new Size(142, 23);
             NomAgent.TabIndex = 89;
@@ -170,8 +172,9 @@
             // TextNomAgent
             // 
             TextNomAgent.AutoSize = true;
-            TextNomAgent.BackColor = SystemColors.Control;
-            TextNomAgent.Location = new Point(241, 82);
+            TextNomAgent.BackColor = Color.OliveDrab;
+            TextNomAgent.ForeColor = Color.White;
+            TextNomAgent.Location = new Point(341, 85);
             TextNomAgent.Name = "TextNomAgent";
             TextNomAgent.Size = new Size(34, 15);
             TextNomAgent.TabIndex = 88;
@@ -190,8 +193,9 @@
             // TextGenreAgent
             // 
             TextGenreAgent.AutoSize = true;
-            TextGenreAgent.BackColor = SystemColors.Control;
-            TextGenreAgent.Location = new Point(720, 82);
+            TextGenreAgent.BackColor = Color.OliveDrab;
+            TextGenreAgent.ForeColor = Color.White;
+            TextGenreAgent.Location = new Point(809, 85);
             TextGenreAgent.Name = "TextGenreAgent";
             TextGenreAgent.Size = new Size(38, 15);
             TextGenreAgent.TabIndex = 86;
@@ -231,7 +235,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.Khaki;
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox6);
             panel1.Dock = DockStyle.Left;
@@ -243,9 +247,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(75, 374);
+            pictureBox4.Location = new Point(64, 374);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 48);
+            pictureBox4.Size = new Size(68, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 10;
             pictureBox4.TabStop = false;
@@ -254,8 +258,9 @@
             // TextMotDePasseAgents
             // 
             TextMotDePasseAgents.AutoSize = true;
-            TextMotDePasseAgents.BackColor = SystemColors.Control;
-            TextMotDePasseAgents.Location = new Point(872, 85);
+            TextMotDePasseAgents.BackColor = Color.OliveDrab;
+            TextMotDePasseAgents.ForeColor = Color.White;
+            TextMotDePasseAgents.Location = new Point(961, 88);
             TextMotDePasseAgents.Name = "TextMotDePasseAgents";
             TextMotDePasseAgents.Size = new Size(77, 15);
             TextMotDePasseAgents.TabIndex = 101;
@@ -264,7 +269,7 @@
             // DateNaissanceAgent
             // 
             DateNaissanceAgent.Format = DateTimePickerFormat.Short;
-            DateNaissanceAgent.Location = new Point(401, 103);
+            DateNaissanceAgent.Location = new Point(490, 106);
             DateNaissanceAgent.Name = "DateNaissanceAgent";
             DateNaissanceAgent.Size = new Size(114, 23);
             DateNaissanceAgent.TabIndex = 102;
@@ -272,48 +277,49 @@
             // TelephoneAgent
             // 
             TelephoneAgent.FormattingEnabled = true;
-            TelephoneAgent.Location = new Point(535, 103);
+            TelephoneAgent.Location = new Point(624, 106);
             TelephoneAgent.Name = "TelephoneAgent";
             TelephoneAgent.Size = new Size(121, 23);
             TelephoneAgent.TabIndex = 103;
             // 
             // AgentDgv
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            AgentDgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            AgentDgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            AgentDgv.BackgroundColor = Color.Khaki;
             AgentDgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            AgentDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            AgentDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             AgentDgv.ColumnHeadersHeight = 20;
             AgentDgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             AgentDgv.Columns.AddRange(new DataGridViewColumn[] { AgNum, AgNom, AgADN, AgTel, AgSex, AgPass });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            AgentDgv.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            AgentDgv.DefaultCellStyle = dataGridViewCellStyle6;
             AgentDgv.GridColor = Color.FromArgb(231, 229, 255);
-            AgentDgv.Location = new Point(232, 222);
+            AgentDgv.Location = new Point(221, 234);
             AgentDgv.Name = "AgentDgv";
             AgentDgv.RowHeadersVisible = false;
             AgentDgv.RowTemplate.Height = 25;
-            AgentDgv.Size = new Size(814, 259);
+            AgentDgv.Size = new Size(834, 247);
             AgentDgv.TabIndex = 104;
             AgentDgv.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             AgentDgv.ThemeStyle.AlternatingRowsStyle.Font = null;
             AgentDgv.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             AgentDgv.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             AgentDgv.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            AgentDgv.ThemeStyle.BackColor = Color.White;
+            AgentDgv.ThemeStyle.BackColor = Color.Khaki;
             AgentDgv.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             AgentDgv.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             AgentDgv.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -371,7 +377,7 @@
             // MotDePasseAgent
             // 
             MotDePasseAgent.FormattingEnabled = true;
-            MotDePasseAgent.Location = new Point(839, 103);
+            MotDePasseAgent.Location = new Point(928, 106);
             MotDePasseAgent.Name = "MotDePasseAgent";
             MotDePasseAgent.Size = new Size(121, 23);
             MotDePasseAgent.TabIndex = 106;
@@ -380,6 +386,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(1058, 506);
             Controls.Add(MotDePasseAgent);
             Controls.Add(AgentDgv);

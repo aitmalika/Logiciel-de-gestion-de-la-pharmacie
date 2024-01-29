@@ -47,7 +47,6 @@
             TTCfacture = new Label();
             TextPU = new TextBox();
             PUfacture = new Label();
-            TextTauxTVA = new TextBox();
             TauxFacture = new Label();
             DataGridFacture = new Guna.UI2.WinForms.Guna2DataGridView();
             NumFacture = new DataGridViewTextBoxColumn();
@@ -71,6 +70,7 @@
             TextNumClient = new ComboBox();
             TextMedNum = new ComboBox();
             pictureBox4 = new PictureBox();
+            TextTauxTva = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)DataGridFacture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -78,9 +78,9 @@
             // TextNomClient
             // 
             TextNomClient.AutoSize = true;
-            TextNomClient.BackColor = Color.ForestGreen;
+            TextNomClient.BackColor = Color.OliveDrab;
             TextNomClient.ForeColor = Color.White;
-            TextNomClient.Location = new Point(723, 69);
+            TextNomClient.Location = new Point(737, 40);
             TextNomClient.Name = "TextNomClient";
             TextNomClient.Size = new Size(68, 15);
             TextNomClient.TabIndex = 52;
@@ -88,17 +88,18 @@
             // 
             // TextQuantite
             // 
-            TextQuantite.Location = new Point(552, 151);
+            TextQuantite.Location = new Point(117, 142);
             TextQuantite.Name = "TextQuantite";
-            TextQuantite.Size = new Size(142, 23);
+            TextQuantite.Size = new Size(87, 23);
             TextQuantite.TabIndex = 55;
+            TextQuantite.TextChanged += TextQuantite_TextChanged;
             // 
             // QuantiteFAC
             // 
             QuantiteFAC.AutoSize = true;
-            QuantiteFAC.BackColor = Color.ForestGreen;
+            QuantiteFAC.BackColor = Color.OliveDrab;
             QuantiteFAC.ForeColor = Color.White;
-            QuantiteFAC.Location = new Point(569, 130);
+            QuantiteFAC.Location = new Point(125, 121);
             QuantiteFAC.Name = "QuantiteFAC";
             QuantiteFAC.Size = new Size(53, 15);
             QuantiteFAC.TabIndex = 54;
@@ -107,9 +108,9 @@
             // Date
             // 
             Date.AutoSize = true;
-            Date.BackColor = Color.ForestGreen;
+            Date.BackColor = Color.OliveDrab;
             Date.ForeColor = Color.White;
-            Date.Location = new Point(552, 9);
+            Date.Location = new Point(576, 45);
             Date.Name = "Date";
             Date.Size = new Size(73, 15);
             Date.TabIndex = 56;
@@ -117,17 +118,18 @@
             // 
             // TextHT
             // 
-            TextHT.Location = new Point(535, 90);
+            TextHT.Location = new Point(459, 142);
             TextHT.Name = "TextHT";
-            TextHT.Size = new Size(142, 23);
+            TextHT.Size = new Size(121, 23);
             TextHT.TabIndex = 61;
+            TextHT.TextChanged += TextHT_TextChanged;
             // 
             // HTfacture
             // 
             HTfacture.AutoSize = true;
-            HTfacture.BackColor = Color.ForestGreen;
+            HTfacture.BackColor = Color.OliveDrab;
             HTfacture.ForeColor = Color.White;
-            HTfacture.Location = new Point(552, 69);
+            HTfacture.Location = new Point(476, 121);
             HTfacture.Name = "HTfacture";
             HTfacture.Size = new Size(22, 15);
             HTfacture.TabIndex = 60;
@@ -136,9 +138,9 @@
             // Numero
             // 
             Numero.AutoSize = true;
-            Numero.BackColor = Color.ForestGreen;
+            Numero.BackColor = Color.OliveDrab;
             Numero.ForeColor = Color.White;
-            Numero.Location = new Point(356, 9);
+            Numero.Location = new Point(403, 45);
             Numero.Name = "Numero";
             Numero.Size = new Size(126, 15);
             Numero.TabIndex = 62;
@@ -146,17 +148,18 @@
             // 
             // TextTva
             // 
-            TextTva.Location = new Point(356, 90);
+            TextTva.Location = new Point(586, 141);
             TextTva.Name = "TextTva";
-            TextTva.Size = new Size(142, 23);
+            TextTva.Size = new Size(118, 23);
             TextTva.TabIndex = 65;
+            TextTva.TextChanged += TextTva_TextChanged;
             // 
             // TVAfacture
             // 
             TVAfacture.AutoSize = true;
-            TVAfacture.BackColor = Color.ForestGreen;
+            TVAfacture.BackColor = Color.OliveDrab;
             TVAfacture.ForeColor = Color.White;
-            TVAfacture.Location = new Point(373, 69);
+            TVAfacture.Location = new Point(603, 120);
             TVAfacture.Name = "TVAfacture";
             TVAfacture.Size = new Size(27, 15);
             TVAfacture.TabIndex = 64;
@@ -164,7 +167,7 @@
             // 
             // TextDesginationMed
             // 
-            TextDesginationMed.Location = new Point(185, 30);
+            TextDesginationMed.Location = new Point(240, 66);
             TextDesginationMed.Name = "TextDesginationMed";
             TextDesginationMed.Size = new Size(142, 23);
             TextDesginationMed.TabIndex = 67;
@@ -172,9 +175,9 @@
             // Desgination
             // 
             Desgination.AutoSize = true;
-            Desgination.BackColor = Color.ForestGreen;
+            Desgination.BackColor = Color.OliveDrab;
             Desgination.ForeColor = Color.White;
-            Desgination.Location = new Point(202, 9);
+            Desgination.Location = new Point(253, 45);
             Desgination.Name = "Desgination";
             Desgination.Size = new Size(70, 15);
             Desgination.TabIndex = 66;
@@ -182,17 +185,18 @@
             // 
             // TextTTC
             // 
-            TextTTC.Location = new Point(184, 90);
+            TextTTC.Location = new Point(720, 141);
             TextTTC.Name = "TextTTC";
-            TextTTC.Size = new Size(142, 23);
+            TextTTC.Size = new Size(120, 23);
             TextTTC.TabIndex = 69;
+            TextTTC.TextChanged += TextTTC_TextChanged;
             // 
             // TTCfacture
             // 
             TTCfacture.AutoSize = true;
-            TTCfacture.BackColor = Color.ForestGreen;
+            TTCfacture.BackColor = Color.OliveDrab;
             TTCfacture.ForeColor = Color.White;
-            TTCfacture.Location = new Point(201, 69);
+            TTCfacture.Location = new Point(737, 120);
             TTCfacture.Name = "TTCfacture";
             TTCfacture.Size = new Size(26, 15);
             TTCfacture.TabIndex = 68;
@@ -200,36 +204,29 @@
             // 
             // TextPU
             // 
-            TextPU.Location = new Point(373, 151);
+            TextPU.Location = new Point(352, 141);
             TextPU.Name = "TextPU";
-            TextPU.Size = new Size(142, 23);
+            TextPU.Size = new Size(88, 23);
             TextPU.TabIndex = 71;
+            TextPU.TextChanged += TextPU_TextChanged;
             // 
             // PUfacture
             // 
             PUfacture.AutoSize = true;
-            PUfacture.BackColor = Color.ForestGreen;
+            PUfacture.BackColor = Color.OliveDrab;
             PUfacture.ForeColor = Color.White;
-            PUfacture.Location = new Point(390, 130);
+            PUfacture.Location = new Point(369, 121);
             PUfacture.Name = "PUfacture";
             PUfacture.Size = new Size(22, 15);
             PUfacture.TabIndex = 70;
             PUfacture.Text = "PU";
             // 
-            // TextTauxTVA
-            // 
-            TextTauxTVA.Location = new Point(178, 151);
-            TextTauxTVA.Name = "TextTauxTVA";
-            TextTauxTVA.Size = new Size(142, 23);
-            TextTauxTVA.TabIndex = 73;
-            TextTauxTVA.TextChanged += TauxTVA_TextChanged;
-            // 
             // TauxFacture
             // 
             TauxFacture.AutoSize = true;
-            TauxFacture.BackColor = Color.ForestGreen;
+            TauxFacture.BackColor = Color.OliveDrab;
             TauxFacture.ForeColor = Color.White;
-            TauxFacture.Location = new Point(195, 130);
+            TauxFacture.Location = new Point(250, 119);
             TauxFacture.Name = "TauxFacture";
             TauxFacture.Size = new Size(31, 15);
             TauxFacture.TabIndex = 72;
@@ -239,6 +236,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             DataGridFacture.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            DataGridFacture.BackgroundColor = Color.Khaki;
             DataGridFacture.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -271,7 +269,7 @@
             DataGridFacture.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             DataGridFacture.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             DataGridFacture.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataGridFacture.ThemeStyle.BackColor = Color.White;
+            DataGridFacture.ThemeStyle.BackColor = Color.Khaki;
             DataGridFacture.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             DataGridFacture.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             DataGridFacture.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -358,17 +356,17 @@
             // 
             // TextNumFacture
             // 
-            TextNumFacture.Location = new Point(706, 30);
+            TextNumFacture.Location = new Point(117, 67);
             TextNumFacture.Name = "TextNumFacture";
-            TextNumFacture.Size = new Size(142, 23);
+            TextNumFacture.Size = new Size(110, 23);
             TextNumFacture.TabIndex = 76;
             // 
             // numerofacture
             // 
             numerofacture.AutoSize = true;
-            numerofacture.BackColor = Color.ForestGreen;
+            numerofacture.BackColor = Color.OliveDrab;
             numerofacture.ForeColor = Color.White;
-            numerofacture.Location = new Point(723, 9);
+            numerofacture.Location = new Point(119, 46);
             numerofacture.Name = "numerofacture";
             numerofacture.Size = new Size(93, 15);
             numerofacture.TabIndex = 75;
@@ -376,12 +374,12 @@
             // 
             // AjouterFacture
             // 
-            AjouterFacture.BackColor = Color.ForestGreen;
+            AjouterFacture.BackColor = Color.OliveDrab;
             AjouterFacture.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             AjouterFacture.ForeColor = Color.White;
             AjouterFacture.Location = new Point(7, 12);
             AjouterFacture.Name = "AjouterFacture";
-            AjouterFacture.Size = new Size(90, 29);
+            AjouterFacture.Size = new Size(95, 42);
             AjouterFacture.TabIndex = 80;
             AjouterFacture.Text = "Ajouter";
             AjouterFacture.UseVisualStyleBackColor = false;
@@ -389,12 +387,12 @@
             // 
             // ModifierFacture
             // 
-            ModifierFacture.BackColor = Color.ForestGreen;
+            ModifierFacture.BackColor = Color.OliveDrab;
             ModifierFacture.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ModifierFacture.ForeColor = Color.White;
             ModifierFacture.Location = new Point(8, 60);
             ModifierFacture.Name = "ModifierFacture";
-            ModifierFacture.Size = new Size(88, 30);
+            ModifierFacture.Size = new Size(94, 42);
             ModifierFacture.TabIndex = 79;
             ModifierFacture.Text = "Modifier";
             ModifierFacture.UseVisualStyleBackColor = false;
@@ -402,12 +400,12 @@
             // 
             // SupprimerFacture
             // 
-            SupprimerFacture.BackColor = Color.ForestGreen;
+            SupprimerFacture.BackColor = Color.OliveDrab;
             SupprimerFacture.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SupprimerFacture.ForeColor = Color.White;
             SupprimerFacture.Location = new Point(8, 117);
             SupprimerFacture.Name = "SupprimerFacture";
-            SupprimerFacture.Size = new Size(87, 34);
+            SupprimerFacture.Size = new Size(94, 47);
             SupprimerFacture.TabIndex = 78;
             SupprimerFacture.Text = "supprimer";
             SupprimerFacture.UseVisualStyleBackColor = false;
@@ -415,12 +413,12 @@
             // 
             // ReinitialiserFacture
             // 
-            ReinitialiserFacture.BackColor = Color.ForestGreen;
+            ReinitialiserFacture.BackColor = Color.OliveDrab;
             ReinitialiserFacture.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ReinitialiserFacture.ForeColor = Color.White;
             ReinitialiserFacture.Location = new Point(4, 180);
             ReinitialiserFacture.Name = "ReinitialiserFacture";
-            ReinitialiserFacture.Size = new Size(98, 33);
+            ReinitialiserFacture.Size = new Size(98, 45);
             ReinitialiserFacture.TabIndex = 77;
             ReinitialiserFacture.Text = "Reinitialiser";
             ReinitialiserFacture.UseVisualStyleBackColor = false;
@@ -429,16 +427,16 @@
             // TextDateFacture
             // 
             TextDateFacture.Format = DateTimePickerFormat.Short;
-            TextDateFacture.Location = new Point(535, 31);
+            TextDateFacture.Location = new Point(559, 67);
             TextDateFacture.Name = "TextDateFacture";
-            TextDateFacture.Size = new Size(142, 23);
+            TextDateFacture.Size = new Size(127, 23);
             TextDateFacture.TabIndex = 81;
             TextDateFacture.ValueChanged += DateFacture_ValueChanged;
             // 
             // TextNumClient
             // 
             TextNumClient.FormattingEnabled = true;
-            TextNumClient.Location = new Point(706, 100);
+            TextNumClient.Location = new Point(720, 67);
             TextNumClient.Name = "TextNumClient";
             TextNumClient.Size = new Size(121, 23);
             TextNumClient.TabIndex = 82;
@@ -446,22 +444,32 @@
             // TextMedNum
             // 
             TextMedNum.FormattingEnabled = true;
-            TextMedNum.Location = new Point(356, 31);
+            TextMedNum.Location = new Point(403, 67);
             TextMedNum.Name = "TextMedNum";
-            TextMedNum.Size = new Size(121, 23);
+            TextMedNum.Size = new Size(126, 23);
             TextMedNum.TabIndex = 83;
             TextMedNum.SelectedIndexChanged += TextMedNum_SelectedIndexChanged;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(21, 378);
+            pictureBox4.Location = new Point(21, 373);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 48);
+            pictureBox4.Size = new Size(64, 53);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 84;
             pictureBox4.TabStop = false;
             pictureBox4.Click += pictureBox4_Click;
+            // 
+            // TextTauxTva
+            // 
+            TextTauxTva.FormattingEnabled = true;
+            TextTauxTva.Items.AddRange(new object[] { "20", "14", "7", "0" });
+            TextTauxTva.Location = new Point(231, 141);
+            TextTauxTva.Name = "TextTauxTva";
+            TextTauxTva.Size = new Size(102, 23);
+            TextTauxTva.TabIndex = 94;
+            TextTauxTva.SelectedIndexChanged += TextTauxTva_SelectedIndexChanged;
             // 
             // Facture
             // 
@@ -469,7 +477,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(874, 464);
+            Controls.Add(TextTauxTva);
             Controls.Add(pictureBox4);
             Controls.Add(TextMedNum);
             Controls.Add(TextNumClient);
@@ -481,7 +491,6 @@
             Controls.Add(TextNumFacture);
             Controls.Add(numerofacture);
             Controls.Add(DataGridFacture);
-            Controls.Add(TextTauxTVA);
             Controls.Add(TauxFacture);
             Controls.Add(TextPU);
             Controls.Add(PUfacture);
@@ -510,7 +519,6 @@
 
         #endregion
         private Label TextNomClient;
-        private TextBox TextQuantite;
         private Label QuantiteFAC;
         private DateTimePicker TextDateFacture;
         private Label Date;
@@ -526,7 +534,7 @@
         private Label TTCfacture;
         private TextBox TextPU;
         private Label PUfacture;
-        private TextBox TextTauxTVA;
+        private TextBox TextQuantite;
         private Label TauxFacture;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridFacture;
         private TextBox TextNumFacture;
@@ -551,5 +559,6 @@
         private DataGridViewTextBoxColumn TTC;
         private DataGridViewTextBoxColumn PU;
         private DataGridViewTextBoxColumn TauxTva;
+        private ComboBox TextTauxTva;
     }
 }

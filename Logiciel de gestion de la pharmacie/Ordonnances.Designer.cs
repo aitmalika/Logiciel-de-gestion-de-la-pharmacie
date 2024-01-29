@@ -59,6 +59,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             DataGridOrdonnances.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            DataGridOrdonnances.BackgroundColor = Color.Khaki;
             DataGridOrdonnances.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -91,7 +92,7 @@
             DataGridOrdonnances.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             DataGridOrdonnances.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             DataGridOrdonnances.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataGridOrdonnances.ThemeStyle.BackColor = Color.White;
+            DataGridOrdonnances.ThemeStyle.BackColor = Color.Khaki;
             DataGridOrdonnances.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             DataGridOrdonnances.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             DataGridOrdonnances.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -151,7 +152,7 @@
             // CNSS
             // 
             CNSS.AutoSize = true;
-            CNSS.BackColor = Color.ForestGreen;
+            CNSS.BackColor = Color.OliveDrab;
             CNSS.ForeColor = Color.White;
             CNSS.Location = new Point(157, 27);
             CNSS.Name = "CNSS";
@@ -169,7 +170,7 @@
             // NomMed
             // 
             NomMed.AutoSize = true;
-            NomMed.BackColor = Color.ForestGreen;
+            NomMed.BackColor = Color.OliveDrab;
             NomMed.ForeColor = Color.White;
             NomMed.Location = new Point(530, 27);
             NomMed.Name = "NomMed";
@@ -187,7 +188,7 @@
             // Nom
             // 
             Nom.AutoSize = true;
-            Nom.BackColor = Color.ForestGreen;
+            Nom.BackColor = Color.OliveDrab;
             Nom.ForeColor = Color.White;
             Nom.Location = new Point(346, 26);
             Nom.Name = "Nom";
@@ -198,7 +199,7 @@
             // Date
             // 
             Date.AutoSize = true;
-            Date.BackColor = Color.ForestGreen;
+            Date.BackColor = Color.OliveDrab;
             Date.ForeColor = Color.White;
             Date.Location = new Point(716, 27);
             Date.Name = "Date";
@@ -208,7 +209,7 @@
             // 
             // AjouterOrdonnance
             // 
-            AjouterOrdonnance.BackColor = Color.ForestGreen;
+            AjouterOrdonnance.BackColor = Color.OliveDrab;
             AjouterOrdonnance.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             AjouterOrdonnance.ForeColor = Color.White;
             AjouterOrdonnance.Location = new Point(12, 26);
@@ -221,7 +222,7 @@
             // 
             // ModifierOrdonnance
             // 
-            ModifierOrdonnance.BackColor = Color.ForestGreen;
+            ModifierOrdonnance.BackColor = Color.OliveDrab;
             ModifierOrdonnance.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ModifierOrdonnance.ForeColor = Color.White;
             ModifierOrdonnance.Location = new Point(14, 86);
@@ -234,7 +235,7 @@
             // 
             // SupprimerOrdonnance
             // 
-            SupprimerOrdonnance.BackColor = Color.ForestGreen;
+            SupprimerOrdonnance.BackColor = Color.OliveDrab;
             SupprimerOrdonnance.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SupprimerOrdonnance.ForeColor = Color.White;
             SupprimerOrdonnance.Location = new Point(12, 153);
@@ -247,7 +248,7 @@
             // 
             // ReinitialiserOrdonnance
             // 
-            ReinitialiserOrdonnance.BackColor = Color.ForestGreen;
+            ReinitialiserOrdonnance.BackColor = Color.OliveDrab;
             ReinitialiserOrdonnance.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ReinitialiserOrdonnance.ForeColor = Color.White;
             ReinitialiserOrdonnance.Location = new Point(14, 210);
@@ -269,9 +270,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(30, 373);
+            pictureBox4.Location = new Point(30, 368);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 48);
+            pictureBox4.Size = new Size(68, 53);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 101;
             pictureBox4.TabStop = false;
@@ -281,6 +282,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(869, 460);
             Controls.Add(pictureBox4);
             Controls.Add(TextDateOrd);

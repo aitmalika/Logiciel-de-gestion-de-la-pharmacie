@@ -40,7 +40,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.Control;
+            label1.BackColor = Color.OliveDrab;
             label1.Location = new Point(12, 64);
             label1.Name = "label1";
             label1.Size = new Size(90, 15);
@@ -51,7 +51,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.Control;
+            label2.BackColor = Color.OliveDrab;
             label2.Location = new Point(12, 126);
             label2.Name = "label2";
             label2.Size = new Size(77, 15);
@@ -65,6 +65,7 @@
             textnomutilisateur.Name = "textnomutilisateur";
             textnomutilisateur.Size = new Size(218, 23);
             textnomutilisateur.TabIndex = 2;
+            textnomutilisateur.TextChanged += textnomutilisateur_TextChanged;
             // 
             // textmotdepasse
             // 
@@ -72,10 +73,11 @@
             textmotdepasse.Name = "textmotdepasse";
             textmotdepasse.Size = new Size(218, 23);
             textmotdepasse.TabIndex = 3;
+            textmotdepasse.TextChanged += textmotdepasse_TextChanged_1;
             // 
             // button_connexion
             // 
-            button_connexion.BackColor = Color.ForestGreen;
+            button_connexion.BackColor = Color.OliveDrab;
             button_connexion.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button_connexion.ForeColor = Color.White;
             button_connexion.Location = new Point(122, 168);
@@ -95,7 +97,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(453, 272);
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
+            BackColor = Color.DarkKhaki;
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(522, 272);
             Controls.Add(button_connexion);
             Controls.Add(textmotdepasse);
             Controls.Add(textnomutilisateur);
@@ -103,6 +108,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "connexion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Connexion";
             Load += connexion_Load;
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();

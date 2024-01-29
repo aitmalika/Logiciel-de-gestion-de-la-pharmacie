@@ -43,7 +43,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 72F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.AppWorkspace;
+            label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(539, 111);
@@ -63,10 +63,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.DarkKhaki;
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
+            groupBox1.ForeColor = Color.Khaki;
             groupBox1.Location = new Point(273, 200);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(539, 316);
@@ -77,7 +79,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.AppWorkspace;
+            label2.ForeColor = Color.White;
             label2.Location = new Point(108, 269);
             label2.Name = "label2";
             label2.Size = new Size(331, 18);
@@ -86,7 +88,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.ForestGreen;
+            button2.BackColor = Color.OliveDrab;
             button2.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Location = new Point(163, 202);
@@ -95,10 +97,11 @@
             button2.TabIndex = 2;
             button2.Text = "Inscription";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
-            button1.BackColor = Color.ForestGreen;
+            button1.BackColor = Color.OliveDrab;
             button1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(163, 138);

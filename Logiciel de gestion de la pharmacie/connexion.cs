@@ -45,8 +45,8 @@ namespace Logiciel_de_gestion_de_la_pharmacie
                 if (dt.Rows.Count > 0)
                 {
 
-                    Medicaments Med = new Medicaments();
-                    Med.Show();
+                    Menu menu = new Menu();
+                    menu.Show();
                     this.Hide();
                     conn.Close();
                 }
@@ -94,8 +94,26 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             //        conn.Close();
             //    }
         }
+        private void textmotdepasse_TextChanged(object sender, EventArgs e)
+        {
 
+        }
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textmotdepasse_TextChanged_1(object sender, EventArgs e)
+        {
+            // Assurez-vous que le contrôle est de type TextBox
+            if (sender is TextBox)
+            {
+                TextBox textBox = (TextBox)sender;
+                textBox.PasswordChar = '*';
+            }
+        }
+
+        private void textnomutilisateur_TextChanged(object sender, EventArgs e)
         {
 
         }

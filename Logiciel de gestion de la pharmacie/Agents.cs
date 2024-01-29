@@ -32,7 +32,7 @@ namespace Logiciel_de_gestion_de_la_pharmacie
         public void Afficher()
         {
             //conn.Open();
-          
+
             string Req = "select * From AgentTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Req, conn);
             DataTable dt = new DataTable();
@@ -54,7 +54,7 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             }
             else
             {
-                
+
                 try
                 {
                     conn.Open();

@@ -46,15 +46,15 @@
             SupprimerClient = new Button();
             ReinitialiserClient = new Button();
             DataGridClient = new Guna.UI2.WinForms.Guna2DataGridView();
-            ListeClients = new Label();
-            TextICEClient = new TextBox();
-            pictureBox4 = new PictureBox();
             NumClient = new DataGridViewTextBoxColumn();
             NomClient = new DataGridViewTextBoxColumn();
             TeleClient = new DataGridViewTextBoxColumn();
             IFClient = new DataGridViewTextBoxColumn();
             ICEClient = new DataGridViewTextBoxColumn();
             AdresseClient = new DataGridViewTextBoxColumn();
+            ListeClients = new Label();
+            TextICEClient = new TextBox();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)DataGridClient).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -62,7 +62,7 @@
             // TextTelephone
             // 
             TextTelephone.AutoSize = true;
-            TextTelephone.BackColor = Color.ForestGreen;
+            TextTelephone.BackColor = Color.OliveDrab;
             TextTelephone.ForeColor = Color.White;
             TextTelephone.Location = new Point(440, 30);
             TextTelephone.Name = "TextTelephone";
@@ -80,7 +80,7 @@
             // AdresseClients
             // 
             AdresseClients.AutoSize = true;
-            AdresseClients.BackColor = Color.ForestGreen;
+            AdresseClients.BackColor = Color.OliveDrab;
             AdresseClients.ForeColor = Color.White;
             AdresseClients.Location = new Point(894, 30);
             AdresseClients.Name = "AdresseClients";
@@ -95,11 +95,12 @@
             TextAdresseClient.Name = "TextAdresseClient";
             TextAdresseClient.Size = new Size(115, 23);
             TextAdresseClient.TabIndex = 34;
+            TextAdresseClient.TextChanged += TextAdresseClient_TextChanged;
             // 
             // IF
             // 
             IF.AutoSize = true;
-            IF.BackColor = Color.ForestGreen;
+            IF.BackColor = Color.OliveDrab;
             IF.ForeColor = Color.White;
             IF.Location = new Point(608, 30);
             IF.Name = "IF";
@@ -124,7 +125,7 @@
             // TextNomClients
             // 
             TextNomClients.AutoSize = true;
-            TextNomClients.BackColor = Color.ForestGreen;
+            TextNomClients.BackColor = Color.OliveDrab;
             TextNomClients.ForeColor = Color.White;
             TextNomClients.Location = new Point(267, 30);
             TextNomClients.Name = "TextNomClients";
@@ -135,7 +136,7 @@
             // ICE
             // 
             ICE.AutoSize = true;
-            ICE.BackColor = Color.ForestGreen;
+            ICE.BackColor = Color.OliveDrab;
             ICE.ForeColor = Color.White;
             ICE.Location = new Point(756, 30);
             ICE.Name = "ICE";
@@ -145,7 +146,7 @@
             // 
             // AjouterClient
             // 
-            AjouterClient.BackColor = Color.ForestGreen;
+            AjouterClient.BackColor = Color.OliveDrab;
             AjouterClient.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             AjouterClient.ForeColor = Color.White;
             AjouterClient.Location = new Point(27, 30);
@@ -158,7 +159,7 @@
             // 
             // ModifierClient
             // 
-            ModifierClient.BackColor = Color.ForestGreen;
+            ModifierClient.BackColor = Color.OliveDrab;
             ModifierClient.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ModifierClient.ForeColor = Color.White;
             ModifierClient.Location = new Point(27, 104);
@@ -171,7 +172,7 @@
             // 
             // SupprimerClient
             // 
-            SupprimerClient.BackColor = Color.ForestGreen;
+            SupprimerClient.BackColor = Color.OliveDrab;
             SupprimerClient.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SupprimerClient.ForeColor = Color.White;
             SupprimerClient.Location = new Point(27, 176);
@@ -184,7 +185,7 @@
             // 
             // ReinitialiserClient
             // 
-            ReinitialiserClient.BackColor = Color.ForestGreen;
+            ReinitialiserClient.BackColor = Color.OliveDrab;
             ReinitialiserClient.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ReinitialiserClient.ForeColor = Color.White;
             ReinitialiserClient.Location = new Point(27, 242);
@@ -199,6 +200,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             DataGridClient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            DataGridClient.BackgroundColor = Color.Khaki;
             DataGridClient.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -220,18 +222,18 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DataGridClient.DefaultCellStyle = dataGridViewCellStyle3;
             DataGridClient.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridClient.Location = new Point(250, 188);
+            DataGridClient.Location = new Point(166, 188);
             DataGridClient.Name = "DataGridClient";
             DataGridClient.RowHeadersVisible = false;
             DataGridClient.RowTemplate.Height = 25;
-            DataGridClient.Size = new Size(754, 267);
+            DataGridClient.Size = new Size(838, 267);
             DataGridClient.TabIndex = 46;
             DataGridClient.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             DataGridClient.ThemeStyle.AlternatingRowsStyle.Font = null;
             DataGridClient.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             DataGridClient.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             DataGridClient.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataGridClient.ThemeStyle.BackColor = Color.White;
+            DataGridClient.ThemeStyle.BackColor = Color.Khaki;
             DataGridClient.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             DataGridClient.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             DataGridClient.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -248,35 +250,6 @@
             DataGridClient.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             DataGridClient.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             DataGridClient.CellContentClick += DataGridClient_CellContentClick;
-            // 
-            // ListeClients
-            // 
-            ListeClients.AutoSize = true;
-            ListeClients.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            ListeClients.ForeColor = Color.ForestGreen;
-            ListeClients.Location = new Point(532, 163);
-            ListeClients.Name = "ListeClients";
-            ListeClients.Size = new Size(117, 22);
-            ListeClients.TabIndex = 47;
-            ListeClients.Text = "ListeClients";
-            // 
-            // TextICEClient
-            // 
-            TextICEClient.Location = new Point(724, 52);
-            TextICEClient.Name = "TextICEClient";
-            TextICEClient.Size = new Size(115, 23);
-            TextICEClient.TabIndex = 48;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(68, 363);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 48);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 49;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // NumClient
             // 
@@ -315,10 +288,40 @@
             AdresseClient.HeaderText = "Adresse";
             AdresseClient.Name = "AdresseClient";
             // 
+            // ListeClients
+            // 
+            ListeClients.AutoSize = true;
+            ListeClients.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ListeClients.ForeColor = Color.ForestGreen;
+            ListeClients.Location = new Point(532, 163);
+            ListeClients.Name = "ListeClients";
+            ListeClients.Size = new Size(117, 22);
+            ListeClients.TabIndex = 47;
+            ListeClients.Text = "ListeClients";
+            // 
+            // TextICEClient
+            // 
+            TextICEClient.Location = new Point(724, 52);
+            TextICEClient.Name = "TextICEClient";
+            TextICEClient.Size = new Size(115, 23);
+            TextICEClient.TabIndex = 48;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(35, 363);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(62, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 49;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
+            // 
             // Clients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(1016, 467);
             Controls.Add(pictureBox4);
             Controls.Add(TextICEClient);

@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             BardeProgression = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            pourecentage = new Label();
             Pourcentage = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -41,14 +40,13 @@
             // 
             // BardeProgression
             // 
-            BardeProgression.BackColor = Color.ForestGreen;
-            BardeProgression.Controls.Add(pourecentage);
+            BardeProgression.BackColor = Color.OliveDrab;
             BardeProgression.Controls.Add(Pourcentage);
             BardeProgression.FillColor = Color.ForestGreen;
             BardeProgression.FillThickness = 10;
             BardeProgression.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BardeProgression.ForeColor = Color.ForestGreen;
-            BardeProgression.InnerColor = Color.ForestGreen;
+            BardeProgression.InnerColor = Color.OliveDrab;
             BardeProgression.Location = new Point(157, 46);
             BardeProgression.Minimum = 0;
             BardeProgression.Name = "BardeProgression";
@@ -57,27 +55,16 @@
             BardeProgression.ProgressThickness = 10;
             BardeProgression.ShadowDecoration.CustomizableEdges = customizableEdges1;
             BardeProgression.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            BardeProgression.Size = new Size(124, 124);
+            BardeProgression.Size = new Size(150, 150);
             BardeProgression.TabIndex = 0;
             BardeProgression.Text = "guna2CircleProgressBar1";
             BardeProgression.ValueChanged += BardeProgression_ValueChanged;
             // 
-            // pourecentage
-            // 
-            pourecentage.AutoSize = true;
-            pourecentage.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            pourecentage.ForeColor = Color.Ivory;
-            pourecentage.Location = new Point(43, 49);
-            pourecentage.Name = "pourecentage";
-            pourecentage.Size = new Size(28, 24);
-            pourecentage.TabIndex = 3;
-            pourecentage.Text = "%";
-            pourecentage.Click += pourecentage_Click;
-            // 
             // Pourcentage
             // 
             Pourcentage.AutoSize = true;
-            Pourcentage.Location = new Point(31, 52);
+            Pourcentage.BackColor = Color.Khaki;
+            Pourcentage.Location = new Point(65, 58);
             Pourcentage.Name = "Pourcentage";
             Pourcentage.Size = new Size(23, 21);
             Pourcentage.TabIndex = 3;
@@ -117,7 +104,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.ForestGreen;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(528, 269);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -141,6 +128,5 @@
         private Label label2;
         private System.Windows.Forms.Timer timer1;
         private Label Pourcentage;
-        private Label pourecentage;
     }
 }

@@ -31,7 +31,7 @@ namespace Logiciel_de_gestion_de_la_pharmacie
         }
         public void Afficher()
         {
-            //conn.Open();
+            conn.Open();
             string Req = "select * From Clients";
             SqlDataAdapter sda = new SqlDataAdapter(Req, conn);
             SqlCommandBuilder builler = new SqlCommandBuilder(sda);
@@ -55,20 +55,26 @@ namespace Logiciel_de_gestion_de_la_pharmacie
         {
             if (TextNomClient.Text == "" || TextTeleClient.Text == "" || TextIFClient.Text == "" || TextICEClient.Text == "" || TextAdresseClient.Text == "")
             {
-                MessageBox.Show("compltez les client s'il vous plait");
+                MessageBox.Show("compltez le client s'il vous plait");
             }
             else
             {
                 try
                 {
                     conn.Open();
-                    string Req = "insert into Clients values ('" + TextNomClient.Text + "','" + TextTeleClient.Text + "'," + TextIFClient.Text + "," + TextICEClient.Text + ",'" + TextAdresseClient + "')";
+                    string Req = "insert into Clients values (@Nom, @Telephone, @IF, @ICE, @Adresse)";
+                    //string Req = "insert into Clients values ('" + TextNomClient.Text + "','" + TextTeleClient.Text + "'," + TextIFClient.Text + "," + TextICEClient.Text + ",'" + TextAdresseClient.Text + "')";
                     SqlCommand cmd = new SqlCommand(Req, conn);
+                    cmd.Parameters.AddWithValue("@Nom", TextNomClient.Text);
+                    cmd.Parameters.AddWithValue("@Telephone", TextTeleClient.Text);
+                    cmd.Parameters.AddWithValue("@IF", TextIFClient.Text);
+                    cmd.Parameters.AddWithValue("@ICE", TextICEClient.Text);
+                    cmd.Parameters.AddWithValue("@Adresse", TextAdresseClient.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Clients Ajouté avec Succes");
+                    conn.Close();
                     Afficher();
                     Reinitialiser();
-                    //conn.Close();
 
                 }
                 catch (Exception Ex)
@@ -87,9 +93,7 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             else
             {
                 conn.Open();
-                //string Req = "UPDATE Clients SET NomFRs='" + NomFRs.Text + "',TeleFRs='" + TeleFRs.Text + "',IFFRs='" + IFFRs.Text + "',ICEFRs='" + ICEFRs+"',AdresseFRs='"+Adresse.Text + "'where FabNum=" + Cle + ";";
                 string Req = "UPDATE Clients SET NomClient=@Nom, TeleClient=@Telephone, IFClient=@IF, ICEClient=@ICE,AdresseClient=@Adresse WHERE NumClient=@Cle;";
-
                 SqlCommand cmd = new SqlCommand(Req, conn);
                 cmd.Parameters.AddWithValue("@Nom", TextNomClient.Text);
                 cmd.Parameters.AddWithValue("@Telephone", TextTeleClient.Text);
@@ -99,9 +103,10 @@ namespace Logiciel_de_gestion_de_la_pharmacie
                 cmd.Parameters.AddWithValue("@cle", Cle);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Clients Modifié Avec Succes");
+                conn.Close();
                 Afficher();
                 Reinitialiser();
-                conn.Close();
+                
             }
         }
 
@@ -119,9 +124,9 @@ namespace Logiciel_de_gestion_de_la_pharmacie
                 cmd.Parameters.AddWithValue("@Cle", Cle);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Clients Supprimé avec Succès");
+                conn.Close();
                 Afficher();
                 Reinitialiser();
-                conn.Close();
             }
         }
 
@@ -148,6 +153,11 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
+        }
+
+        private void TextAdresseClient_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

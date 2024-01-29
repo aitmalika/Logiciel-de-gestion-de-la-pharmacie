@@ -77,6 +77,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             ListeDesFabricants.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            ListeDesFabricants.BackgroundColor = Color.Khaki;
             ListeDesFabricants.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -98,18 +99,18 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             ListeDesFabricants.DefaultCellStyle = dataGridViewCellStyle3;
             ListeDesFabricants.GridColor = Color.FromArgb(231, 229, 255);
-            ListeDesFabricants.Location = new Point(215, 325);
+            ListeDesFabricants.Location = new Point(216, 282);
             ListeDesFabricants.Name = "ListeDesFabricants";
             ListeDesFabricants.RowHeadersVisible = false;
             ListeDesFabricants.RowTemplate.Height = 25;
-            ListeDesFabricants.Size = new Size(831, 210);
+            ListeDesFabricants.Size = new Size(836, 224);
             ListeDesFabricants.TabIndex = 82;
             ListeDesFabricants.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             ListeDesFabricants.ThemeStyle.AlternatingRowsStyle.Font = null;
             ListeDesFabricants.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             ListeDesFabricants.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             ListeDesFabricants.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            ListeDesFabricants.ThemeStyle.BackColor = Color.White;
+            ListeDesFabricants.ThemeStyle.BackColor = Color.Khaki;
             ListeDesFabricants.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             ListeDesFabricants.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             ListeDesFabricants.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -163,7 +164,7 @@
             ListeFabricant.AutoSize = true;
             ListeFabricant.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             ListeFabricant.ForeColor = Color.ForestGreen;
-            ListeFabricant.Location = new Point(507, 210);
+            ListeFabricant.Location = new Point(507, 225);
             ListeFabricant.Name = "ListeFabricant";
             ListeFabricant.Size = new Size(196, 22);
             ListeFabricant.TabIndex = 80;
@@ -172,12 +173,12 @@
             // 
             // AjouterFabricant
             // 
-            AjouterFabricant.BackColor = Color.ForestGreen;
+            AjouterFabricant.BackColor = Color.OliveDrab;
             AjouterFabricant.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             AjouterFabricant.ForeColor = Color.White;
-            AjouterFabricant.Location = new Point(398, 178);
+            AjouterFabricant.Location = new Point(215, 40);
             AjouterFabricant.Name = "AjouterFabricant";
-            AjouterFabricant.Size = new Size(90, 29);
+            AjouterFabricant.Size = new Size(98, 32);
             AjouterFabricant.TabIndex = 79;
             AjouterFabricant.Text = "Ajouter";
             AjouterFabricant.UseVisualStyleBackColor = false;
@@ -185,12 +186,12 @@
             // 
             // ModifierFabricant
             // 
-            ModifierFabricant.BackColor = Color.ForestGreen;
+            ModifierFabricant.BackColor = Color.OliveDrab;
             ModifierFabricant.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ModifierFabricant.ForeColor = Color.White;
-            ModifierFabricant.Location = new Point(494, 179);
+            ModifierFabricant.Location = new Point(215, 108);
             ModifierFabricant.Name = "ModifierFabricant";
-            ModifierFabricant.Size = new Size(83, 28);
+            ModifierFabricant.Size = new Size(98, 32);
             ModifierFabricant.TabIndex = 78;
             ModifierFabricant.Text = "Modifier";
             ModifierFabricant.UseVisualStyleBackColor = false;
@@ -198,12 +199,12 @@
             // 
             // SupprimerFabricant
             // 
-            SupprimerFabricant.BackColor = Color.ForestGreen;
+            SupprimerFabricant.BackColor = Color.OliveDrab;
             SupprimerFabricant.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SupprimerFabricant.ForeColor = Color.White;
-            SupprimerFabricant.Location = new Point(594, 179);
+            SupprimerFabricant.Location = new Point(215, 171);
             SupprimerFabricant.Name = "SupprimerFabricant";
-            SupprimerFabricant.Size = new Size(84, 28);
+            SupprimerFabricant.Size = new Size(98, 32);
             SupprimerFabricant.TabIndex = 77;
             SupprimerFabricant.Text = "supprimer";
             SupprimerFabricant.UseVisualStyleBackColor = false;
@@ -211,12 +212,12 @@
             // 
             // ReinitialiserFabricant
             // 
-            ReinitialiserFabricant.BackColor = Color.ForestGreen;
+            ReinitialiserFabricant.BackColor = Color.OliveDrab;
             ReinitialiserFabricant.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ReinitialiserFabricant.ForeColor = Color.White;
-            ReinitialiserFabricant.Location = new Point(693, 178);
+            ReinitialiserFabricant.Location = new Point(216, 229);
             ReinitialiserFabricant.Name = "ReinitialiserFabricant";
-            ReinitialiserFabricant.Size = new Size(98, 28);
+            ReinitialiserFabricant.Size = new Size(97, 32);
             ReinitialiserFabricant.TabIndex = 76;
             ReinitialiserFabricant.Text = "Reinitialiser";
             ReinitialiserFabricant.UseVisualStyleBackColor = false;
@@ -225,8 +226,9 @@
             // TextDescriptionFabricant
             // 
             TextDescriptionFabricant.AutoSize = true;
-            TextDescriptionFabricant.BackColor = SystemColors.Control;
-            TextDescriptionFabricant.Location = new Point(625, 82);
+            TextDescriptionFabricant.BackColor = Color.OliveDrab;
+            TextDescriptionFabricant.ForeColor = Color.White;
+            TextDescriptionFabricant.Location = new Point(725, 87);
             TextDescriptionFabricant.Name = "TextDescriptionFabricant";
             TextDescriptionFabricant.Size = new Size(67, 15);
             TextDescriptionFabricant.TabIndex = 54;
@@ -235,7 +237,7 @@
             // 
             // DescriptionFabicant
             // 
-            DescriptionFabicant.Location = new Point(625, 103);
+            DescriptionFabicant.Location = new Point(725, 108);
             DescriptionFabicant.Multiline = true;
             DescriptionFabicant.Name = "DescriptionFabicant";
             DescriptionFabicant.Size = new Size(146, 69);
@@ -244,8 +246,9 @@
             // TextAdresseFabicant
             // 
             TextAdresseFabicant.AutoSize = true;
-            TextAdresseFabicant.BackColor = SystemColors.Control;
-            TextAdresseFabicant.Location = new Point(432, 82);
+            TextAdresseFabicant.BackColor = Color.OliveDrab;
+            TextAdresseFabicant.ForeColor = Color.White;
+            TextAdresseFabicant.Location = new Point(532, 87);
             TextAdresseFabicant.Name = "TextAdresseFabicant";
             TextAdresseFabicant.Size = new Size(48, 15);
             TextAdresseFabicant.TabIndex = 52;
@@ -254,7 +257,7 @@
             // 
             // Nomfabriant
             // 
-            Nomfabriant.Location = new Point(221, 103);
+            Nomfabriant.Location = new Point(330, 108);
             Nomfabriant.Name = "Nomfabriant";
             Nomfabriant.Size = new Size(142, 23);
             Nomfabriant.TabIndex = 51;
@@ -263,8 +266,9 @@
             // TextNomFabicant
             // 
             TextNomFabicant.AutoSize = true;
-            TextNomFabicant.BackColor = SystemColors.Control;
-            TextNomFabicant.Location = new Point(238, 82);
+            TextNomFabicant.BackColor = Color.OliveDrab;
+            TextNomFabicant.ForeColor = Color.White;
+            TextNomFabicant.Location = new Point(347, 87);
             TextNomFabicant.Name = "TextNomFabicant";
             TextNomFabicant.Size = new Size(34, 15);
             TextNomFabicant.TabIndex = 50;
@@ -273,7 +277,7 @@
             // 
             // AdresseFabicant
             // 
-            AdresseFabicant.Location = new Point(416, 103);
+            AdresseFabicant.Location = new Point(516, 108);
             AdresseFabicant.Multiline = true;
             AdresseFabicant.Name = "AdresseFabicant";
             AdresseFabicant.Size = new Size(146, 69);
@@ -283,8 +287,9 @@
             // TextTelephoneFabricant
             // 
             TextTelephoneFabricant.AutoSize = true;
-            TextTelephoneFabricant.BackColor = SystemColors.Control;
-            TextTelephoneFabricant.Location = new Point(841, 82);
+            TextTelephoneFabricant.BackColor = Color.OliveDrab;
+            TextTelephoneFabricant.ForeColor = Color.White;
+            TextTelephoneFabricant.Location = new Point(941, 87);
             TextTelephoneFabricant.Name = "TextTelephoneFabricant";
             TextTelephoneFabricant.Size = new Size(61, 15);
             TextTelephoneFabricant.TabIndex = 48;
@@ -314,7 +319,7 @@
             // 
             TextTableauDeBord.AutoSize = true;
             TextTableauDeBord.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TextTableauDeBord.ForeColor = Color.Black;
+            TextTableauDeBord.ForeColor = Color.OliveDrab;
             TextTableauDeBord.Location = new Point(63, 304);
             TextTableauDeBord.Name = "TextTableauDeBord";
             TextTableauDeBord.Size = new Size(128, 17);
@@ -356,9 +361,9 @@
             // TextMedicamant
             // 
             TextMedicamant.AutoSize = true;
-            TextMedicamant.BackColor = Color.DarkGray;
+            TextMedicamant.BackColor = Color.Khaki;
             TextMedicamant.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TextMedicamant.ForeColor = Color.Black;
+            TextMedicamant.ForeColor = Color.OliveDrab;
             TextMedicamant.Location = new Point(60, 123);
             TextMedicamant.Name = "TextMedicamant";
             TextMedicamant.Size = new Size(120, 17);
@@ -391,7 +396,7 @@
             // 
             TextFacture.AutoSize = true;
             TextFacture.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TextFacture.ForeColor = Color.Black;
+            TextFacture.ForeColor = Color.OliveDrab;
             TextFacture.Location = new Point(60, 203);
             TextFacture.Name = "TextFacture";
             TextFacture.Size = new Size(90, 17);
@@ -401,7 +406,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.Khaki;
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(TextTableauDeBord);
@@ -429,7 +434,7 @@
             // 
             // TelephoneFabricant
             // 
-            TelephoneFabricant.Location = new Point(799, 108);
+            TelephoneFabricant.Location = new Point(899, 113);
             TelephoneFabricant.Name = "TelephoneFabricant";
             TelephoneFabricant.Size = new Size(142, 23);
             TelephoneFabricant.TabIndex = 82;
@@ -439,6 +444,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(1058, 506);
             Controls.Add(TelephoneFabricant);
             Controls.Add(ListeDesFabricants);
@@ -458,6 +464,7 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(panel1);
+            ForeColor = Color.DarkKhaki;
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "FABRICANTS";
             Text = "FABRICANTS";

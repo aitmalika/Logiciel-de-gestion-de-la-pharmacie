@@ -49,21 +49,20 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             TauxDePriseEnChargeMedicament.Text = "";
             CodeABarresMedicament.Text = "";
             FabricantMedicament.SelectedValue.ToString();
-            MedPrixV.Text = "";
-            MedPhoto.Text = "";
+            textMedPrixV.Text = "";
             Cle = 0;
 
         }
         public void Afficher()
         {
-            //conn.Open();
+            conn.Open();
             string Req = "select * From MedicamentTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Req, conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             DgvMedicament.AutoGenerateColumns = false;
             DgvMedicament.DataSource = dt;
-            //conn.Close();
+            conn.Close();
         }
         private void Medicaments_Load(object sender, EventArgs e)
         {
@@ -130,14 +129,14 @@ namespace Logiciel_de_gestion_de_la_pharmacie
 
         private void ModifierMedicamaent_Click(object sender, EventArgs e)
         {
-            if (NomMedicament.Text == "" || PrixAchatMedicament.Text == "" || QuantiteDisponibleMedicament.Text == "" || FabricantMedicament.SelectedIndex == -1 || QuantiteMinimaleMedicament.Text == "" || DateExpirationMedicament.Text == "" || DesignationMedicament.Text == "" || UtilisationsMedicament.Text == "" || ContreIndicationMedicament.Text == "" || EffetsSecondairesMedicament.Text == "" || TauxDePriseEnChargeMedicament.Text == "" || CodeABarresMedicament.Text == "")
+            if (NomMedicament.Text == "" || PrixAchatMedicament.Text == "" || QuantiteDisponibleMedicament.Text == "" || FabricantMedicament.SelectedIndex == -1 || QuantiteMinimaleMedicament.Text == "" || DateExpirationMedicament.Text == "" || DesignationMedicament.Text == "" || UtilisationsMedicament.Text == "" || ContreIndicationMedicament.Text == "" || EffetsSecondairesMedicament.Text == "" || TauxDePriseEnChargeMedicament.Text == "" || CodeABarresMedicament.Text == "" || textMedPrixV.Text == "")
             {
                 MessageBox.Show("Information Manquante");
             }
             else
             {
                 conn.Open();
-                string Req = "UPDATE MedicamentTbl SET MedNom=@Nom, MedPrixA=@PrixAchat, MedQteM=@QuantiteMinimale, MedExp=@DateExpiration, MedDesig=@Designation, MedQteD=@QuantiteDisponible, MedUtili=@Utilisations, MedContInd=@ContreIndication, MedEffet=@EffetsSecondaires, MedTpc=@TauxDePriseEnCharge, MedCodBa=@CodeABarres, IdFabrican=@Fabricant WHERE MedNum=@Cle";
+                string Req = "UPDATE MedicamentTbl SET MedNom=@Nom, MedPrixA=@PrixAchat, MedQteM=@QuantiteMinimale, MedExp=@DateExpiration, MedDesig=@Designation, MedQteD=@QuantiteDisponible, MedUtili=@Utilisations, MedContInd=@ContreIndication, MedEffet=@EffetsSecondaires, MedTpc=@TauxDePriseEnCharge, MedCodBa=@CodeABarres, IdFabrican=@Fabricant,MedPrixV=@PrixVente WHERE MedNum=@Cle";
                 SqlCommand cmd = new SqlCommand(Req, conn);
                 cmd.Parameters.AddWithValue("@Nom", NomMedicament.Text);
                 cmd.Parameters.AddWithValue("@PrixAchat", PrixAchatMedicament.Text);
@@ -151,25 +150,13 @@ namespace Logiciel_de_gestion_de_la_pharmacie
                 cmd.Parameters.AddWithValue("@TauxDePriseEnCharge", TauxDePriseEnChargeMedicament.Text);
                 cmd.Parameters.AddWithValue("@CodeABarres", CodeABarresMedicament.Text);
                 cmd.Parameters.AddWithValue("@Fabricant", FabricantMedicament.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@PrixVente", textMedPrixV.Text);
                 cmd.Parameters.AddWithValue("@Cle", Cle);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Medicament Modifié Avec Succes");
+                conn.Close();
                 Afficher();
                 Reinitialiser();
-                conn.Close();
-                //try
-                //{
-
-
-                //}
-                //catch (Exception Ex)
-                //{
-                //    MessageBox.Show(Ex.Message);
-                //}
-                //finally
-                //{
-                //    conn.Close();
-                //}
             }
         }
 
@@ -187,22 +174,14 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             else
             {
                 conn.Open();
-                string Req = "delete From MedicamentTbl where MedNum=" + Cle + "";
+                string Req = "delete From MedicamentTbl where MedNum=@Cle";
                 SqlCommand cmd = new SqlCommand(Req, conn);
+                cmd.Parameters.AddWithValue("@Cle", Cle);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Medicament Supprimé avec Succes");
+                conn.Close();
                 Afficher();
                 Reinitialiser();
-                conn.Close();
-
-                //try
-                //{
-
-                //}
-                //catch (Exception Ex)
-                //{
-                //    MessageBox.Show(Ex.Message);
-                //}
             }
         }
 
@@ -211,7 +190,7 @@ namespace Logiciel_de_gestion_de_la_pharmacie
 
         private void AjouterMedicament_Click(object sender, EventArgs e)
         {
-            if (NomMedicament.Text == "" || PrixAchatMedicament.Text == "" || QuantiteDisponibleMedicament.Text == "" || FabricantMedicament.SelectedIndex == -1 || QuantiteMinimaleMedicament.Text == "" || DateExpirationMedicament.Text == "" || DesignationMedicament.Text == "" || UtilisationsMedicament.Text == "" || ContreIndicationMedicament.Text == "" || EffetsSecondairesMedicament.Text == "" || TauxDePriseEnChargeMedicament.Text == "" || CodeABarresMedicament.Text == "")
+            if (NomMedicament.Text == "" || PrixAchatMedicament.Text == "" || QuantiteDisponibleMedicament.Text == "" || FabricantMedicament.SelectedIndex == -1 || QuantiteMinimaleMedicament.Text == "" || DateExpirationMedicament.Text == "" || DesignationMedicament.Text == "" || UtilisationsMedicament.Text == "" || ContreIndicationMedicament.Text == "" || EffetsSecondairesMedicament.Text == "" || TauxDePriseEnChargeMedicament.Text == "" || CodeABarresMedicament.Text == "" || textMedPrixV.Text == "")
             {
                 MessageBox.Show("compltez les informations s'il vous plait");
             }
@@ -222,14 +201,15 @@ namespace Logiciel_de_gestion_de_la_pharmacie
                 {
                     conn.Open();
 
-                    Req = "insert into MedicamentTbl(MedNom, MedPrixA, MedQteM, MedExp,MedDesig, MedQteD, MedUtili, MedContInd, MedEffet, MedTpc, MedCodBa, IdFabrican) values('" + NomMedicament.Text + "'," + PrixAchatMedicament.Text + "," + QuantiteMinimaleMedicament.Text + ",'" + DateExpirationMedicament.Value.Date + "','" + DesignationMedicament.Text + "'," + QuantiteDisponibleMedicament.Text + ",'" + UtilisationsMedicament.Text + "','" + ContreIndicationMedicament.Text + "','" + EffetsSecondairesMedicament.Text + "'," + TauxDePriseEnChargeMedicament.Text + "," + CodeABarresMedicament.Text + "," + FabricantMedicament.SelectedValue + ")";
+                    Req = "insert into MedicamentTbl(MedNom, MedPrixA, MedQteM, MedExp,MedDesig, MedQteD, MedUtili, MedContInd, MedEffet, MedTpc, MedCodBa, IdFabrican,MedPrixV) values('" + NomMedicament.Text + "'," + PrixAchatMedicament.Text + "," + QuantiteMinimaleMedicament.Text + ",'" + DateExpirationMedicament.Value.Date + "','" + DesignationMedicament.Text + "'," + QuantiteDisponibleMedicament.Text + ",'" + UtilisationsMedicament.Text + "','" + ContreIndicationMedicament.Text + "','" + EffetsSecondairesMedicament.Text + "'," + TauxDePriseEnChargeMedicament.Text + "," + CodeABarresMedicament.Text + "," + FabricantMedicament.SelectedValue + "," + textMedPrixV.Text + ")";
 
                     SqlCommand cmd = new SqlCommand(Req, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Medicament Ajouté avec Succes");
+                    conn.Close();
                     Afficher();
                     Reinitialiser();
-                    conn.Close();
+
                 }
                 catch (Exception Ex)
                 {
@@ -268,8 +248,8 @@ namespace Logiciel_de_gestion_de_la_pharmacie
                 TauxDePriseEnChargeMedicament.Text = DgvMedicament.SelectedRows[0].Cells[10].Value?.ToString();
                 CodeABarresMedicament.Text = DgvMedicament.SelectedRows[0].Cells[11].Value?.ToString();
                 FabricantMedicament.SelectedValue = DgvMedicament.SelectedRows[0].Cells[12].Value?.ToString();
-                //MedPrixV.Text = DgvMedicament.SelectedRows[0].Cells[13].Value.ToString();
-                //MedPhoto.Text = DgvMedicament.SelectedRows[0].Cells[15].Value.ToString();
+                textMedPrixV.Text = DgvMedicament.SelectedRows[0].Cells[13].Value.ToString();
+
 
                 if (NomMedicament.Text == "")
                     Cle = 0;
@@ -305,6 +285,28 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
+        }
+
+        private void MedPrixV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrixV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DesignationMedicament_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void TextDesignationMedicament_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void UtilisationsMedicament_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

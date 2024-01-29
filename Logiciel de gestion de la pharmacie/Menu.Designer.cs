@@ -36,13 +36,19 @@
             button5 = new Button();
             button6 = new Button();
             panel1 = new Panel();
+            AfficherDateHeure = new Label();
+            buttondeconecter = new Button();
+            label3 = new Label();
             pictureBox6 = new PictureBox();
             panel2 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
             button7 = new Button();
             button8 = new Button();
             button9 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -146,36 +152,97 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
-            panel1.Controls.Add(pictureBox6);
+            panel1.BackColor = Color.Khaki;
+            panel1.Controls.Add(AfficherDateHeure);
+            panel1.Controls.Add(buttondeconecter);
+            panel1.Controls.Add(label3);
             panel1.ForeColor = Color.Black;
-            panel1.Location = new Point(0, 46);
+            panel1.Location = new Point(0, 38);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 520);
+            panel1.Size = new Size(233, 539);
             panel1.TabIndex = 6;
             panel1.Paint += panel1_Paint;
+            // 
+            // AfficherDateHeure
+            // 
+            AfficherDateHeure.AutoSize = true;
+            AfficherDateHeure.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            AfficherDateHeure.Location = new Point(67, 454);
+            AfficherDateHeure.Name = "AfficherDateHeure";
+            AfficherDateHeure.Size = new Size(57, 15);
+            AfficherDateHeure.TabIndex = 11;
+            AfficherDateHeure.Text = "DateTime";
+            AfficherDateHeure.Click += AfficherDateHeure_Click;
+            // 
+            // buttondeconecter
+            // 
+            buttondeconecter.BackColor = Color.DarkKhaki;
+            buttondeconecter.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            buttondeconecter.ForeColor = Color.Khaki;
+            buttondeconecter.Location = new Point(12, 18);
+            buttondeconecter.Name = "buttondeconecter";
+            buttondeconecter.Size = new Size(159, 48);
+            buttondeconecter.TabIndex = 13;
+            buttondeconecter.Text = "Déconnecter ";
+            buttondeconecter.UseVisualStyleBackColor = false;
+            buttondeconecter.Click += buttondeconecter_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label3.ForeColor = Color.DarkKhaki;
+            label3.Location = new Point(63, 495);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 24);
+            label3.TabIndex = 12;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(32, 3);
+            pictureBox6.Location = new Point(12, 0);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(83, 49);
+            pictureBox6.Size = new Size(93, 51);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 10;
             pictureBox6.TabStop = false;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.DarkGray;
-            panel2.Location = new Point(0, 3);
+            panel2.BackColor = Color.Khaki;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(0, -1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1029, 39);
+            panel2.Size = new Size(1041, 43);
             panel2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkKhaki;
+            label1.Location = new Point(641, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(127, 15);
+            label1.TabIndex = 11;
+            label1.Text = " Version 1.15.2190";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkKhaki;
+            label2.Location = new Point(391, 3);
+            label2.Name = "label2";
+            label2.Size = new Size(259, 28);
+            label2.TabIndex = 2;
+            label2.Text = "PHARMACIE MALIKA";
             // 
             // button7
             // 
-            button7.BackColor = Color.White;
+            button7.BackColor = Color.DarkKhaki;
             button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
             button7.BackgroundImageLayout = ImageLayout.Stretch;
             button7.FlatStyle = FlatStyle.Popup;
@@ -227,7 +294,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(1041, 578);
             Controls.Add(button6);
             Controls.Add(button9);
@@ -245,7 +312,10 @@
             Text = "TableauDeBord";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -263,5 +333,10 @@
         private Button button8;
         private Button button9;
         private PictureBox pictureBox6;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Button buttondeconecter;
+        private Label AfficherDateHeure;
     }
 }

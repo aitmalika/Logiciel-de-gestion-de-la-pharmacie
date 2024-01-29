@@ -35,6 +35,12 @@
             ComboboxICEFRs = new TextBox();
             ListeFournisseurs = new Label();
             DataGridFournisseurs = new Guna.UI2.WinForms.Guna2DataGridView();
+            NumFRs = new DataGridViewTextBoxColumn();
+            NomFRs = new DataGridViewTextBoxColumn();
+            TeleFRs = new DataGridViewTextBoxColumn();
+            IFFRs = new DataGridViewTextBoxColumn();
+            ICEFRs = new DataGridViewTextBoxColumn();
+            AdresseFRs = new DataGridViewTextBoxColumn();
             AjouterFRs = new Button();
             ModifierFRs = new Button();
             SupprimerFRs = new Button();
@@ -49,12 +55,6 @@
             TextNomFRs = new Label();
             ICE = new Label();
             pictureBox4 = new PictureBox();
-            NumFRs = new DataGridViewTextBoxColumn();
-            NomFRs = new DataGridViewTextBoxColumn();
-            TeleFRs = new DataGridViewTextBoxColumn();
-            IFFRs = new DataGridViewTextBoxColumn();
-            ICEFRs = new DataGridViewTextBoxColumn();
-            AdresseFRs = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)DataGridFournisseurs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -81,6 +81,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             DataGridFournisseurs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            DataGridFournisseurs.BackgroundColor = Color.Khaki;
             DataGridFournisseurs.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -102,18 +103,18 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DataGridFournisseurs.DefaultCellStyle = dataGridViewCellStyle3;
             DataGridFournisseurs.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridFournisseurs.Location = new Point(250, 150);
+            DataGridFournisseurs.Location = new Point(141, 150);
             DataGridFournisseurs.Name = "DataGridFournisseurs";
             DataGridFournisseurs.RowHeadersVisible = false;
             DataGridFournisseurs.RowTemplate.Height = 25;
-            DataGridFournisseurs.Size = new Size(771, 276);
+            DataGridFournisseurs.Size = new Size(880, 326);
             DataGridFournisseurs.TabIndex = 62;
             DataGridFournisseurs.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             DataGridFournisseurs.ThemeStyle.AlternatingRowsStyle.Font = null;
             DataGridFournisseurs.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             DataGridFournisseurs.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             DataGridFournisseurs.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataGridFournisseurs.ThemeStyle.BackColor = Color.White;
+            DataGridFournisseurs.ThemeStyle.BackColor = Color.Khaki;
             DataGridFournisseurs.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             DataGridFournisseurs.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             DataGridFournisseurs.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -130,152 +131,6 @@
             DataGridFournisseurs.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             DataGridFournisseurs.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             DataGridFournisseurs.CellContentClick += DataGridFournisseurs_CellContentClick;
-            // 
-            // AjouterFRs
-            // 
-            AjouterFRs.BackColor = Color.ForestGreen;
-            AjouterFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            AjouterFRs.ForeColor = Color.White;
-            AjouterFRs.Location = new Point(42, 23);
-            AjouterFRs.Name = "AjouterFRs";
-            AjouterFRs.Size = new Size(104, 35);
-            AjouterFRs.TabIndex = 61;
-            AjouterFRs.Text = "Ajouter";
-            AjouterFRs.UseVisualStyleBackColor = false;
-            AjouterFRs.Click += AjouterFRs_Click;
-            // 
-            // ModifierFRs
-            // 
-            ModifierFRs.BackColor = Color.ForestGreen;
-            ModifierFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            ModifierFRs.ForeColor = Color.White;
-            ModifierFRs.Location = new Point(44, 83);
-            ModifierFRs.Name = "ModifierFRs";
-            ModifierFRs.Size = new Size(102, 34);
-            ModifierFRs.TabIndex = 60;
-            ModifierFRs.Text = "Modifier";
-            ModifierFRs.UseVisualStyleBackColor = false;
-            ModifierFRs.Click += ModifierFRs_Click;
-            // 
-            // SupprimerFRs
-            // 
-            SupprimerFRs.BackColor = Color.ForestGreen;
-            SupprimerFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SupprimerFRs.ForeColor = Color.White;
-            SupprimerFRs.Location = new Point(42, 150);
-            SupprimerFRs.Name = "SupprimerFRs";
-            SupprimerFRs.Size = new Size(104, 39);
-            SupprimerFRs.TabIndex = 59;
-            SupprimerFRs.Text = "supprimer";
-            SupprimerFRs.UseVisualStyleBackColor = false;
-            SupprimerFRs.Click += SupprimerFRs_Click;
-            // 
-            // ReinitialiserFRs
-            // 
-            ReinitialiserFRs.BackColor = Color.ForestGreen;
-            ReinitialiserFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            ReinitialiserFRs.ForeColor = Color.White;
-            ReinitialiserFRs.Location = new Point(44, 207);
-            ReinitialiserFRs.Name = "ReinitialiserFRs";
-            ReinitialiserFRs.Size = new Size(102, 37);
-            ReinitialiserFRs.TabIndex = 58;
-            ReinitialiserFRs.Text = "Reinitialiser";
-            ReinitialiserFRs.UseVisualStyleBackColor = false;
-            ReinitialiserFRs.Click += ReinitialiserFRs_Click;
-            // 
-            // TextTelephoneFRs
-            // 
-            TextTelephoneFRs.AutoSize = true;
-            TextTelephoneFRs.BackColor = Color.ForestGreen;
-            TextTelephoneFRs.ForeColor = Color.White;
-            TextTelephoneFRs.Location = new Point(457, 23);
-            TextTelephoneFRs.Name = "TextTelephoneFRs";
-            TextTelephoneFRs.Size = new Size(61, 15);
-            TextTelephoneFRs.TabIndex = 57;
-            TextTelephoneFRs.Text = "Telephone";
-            // 
-            // ComboboxTeleFRs
-            // 
-            ComboboxTeleFRs.Location = new Point(438, 45);
-            ComboboxTeleFRs.Name = "ComboboxTeleFRs";
-            ComboboxTeleFRs.Size = new Size(118, 23);
-            ComboboxTeleFRs.TabIndex = 56;
-            // 
-            // AdresseClients
-            // 
-            AdresseClients.AutoSize = true;
-            AdresseClients.BackColor = Color.ForestGreen;
-            AdresseClients.ForeColor = Color.White;
-            AdresseClients.Location = new Point(911, 23);
-            AdresseClients.Name = "AdresseClients";
-            AdresseClients.Size = new Size(48, 15);
-            AdresseClients.TabIndex = 55;
-            AdresseClients.Text = "Adresse";
-            // 
-            // ComboboxAdresseFRs
-            // 
-            ComboboxAdresseFRs.Location = new Point(889, 44);
-            ComboboxAdresseFRs.Name = "ComboboxAdresseFRs";
-            ComboboxAdresseFRs.Size = new Size(115, 23);
-            ComboboxAdresseFRs.TabIndex = 54;
-            // 
-            // IF
-            // 
-            IF.AutoSize = true;
-            IF.BackColor = Color.ForestGreen;
-            IF.ForeColor = Color.White;
-            IF.Location = new Point(625, 23);
-            IF.Name = "IF";
-            IF.Size = new Size(16, 15);
-            IF.TabIndex = 53;
-            IF.Text = "IF";
-            // 
-            // ComboboxIFFRs
-            // 
-            ComboboxIFFRs.Location = new Point(587, 44);
-            ComboboxIFFRs.Name = "ComboboxIFFRs";
-            ComboboxIFFRs.Size = new Size(117, 23);
-            ComboboxIFFRs.TabIndex = 52;
-            // 
-            // ComboboxNomFRs
-            // 
-            ComboboxNomFRs.Location = new Point(267, 44);
-            ComboboxNomFRs.Name = "ComboboxNomFRs";
-            ComboboxNomFRs.Size = new Size(142, 23);
-            ComboboxNomFRs.TabIndex = 51;
-            // 
-            // TextNomFRs
-            // 
-            TextNomFRs.AutoSize = true;
-            TextNomFRs.BackColor = Color.ForestGreen;
-            TextNomFRs.ForeColor = Color.White;
-            TextNomFRs.Location = new Point(284, 23);
-            TextNomFRs.Name = "TextNomFRs";
-            TextNomFRs.Size = new Size(34, 15);
-            TextNomFRs.TabIndex = 50;
-            TextNomFRs.Text = "Nom";
-            // 
-            // ICE
-            // 
-            ICE.AutoSize = true;
-            ICE.BackColor = Color.ForestGreen;
-            ICE.ForeColor = Color.White;
-            ICE.Location = new Point(773, 23);
-            ICE.Name = "ICE";
-            ICE.Size = new Size(24, 15);
-            ICE.TabIndex = 49;
-            ICE.Text = "ICE";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(65, 378);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 48);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 65;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // NumFRs
             // 
@@ -314,10 +169,157 @@
             AdresseFRs.HeaderText = "Adresse";
             AdresseFRs.Name = "AdresseFRs";
             // 
+            // AjouterFRs
+            // 
+            AjouterFRs.BackColor = Color.OliveDrab;
+            AjouterFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            AjouterFRs.ForeColor = Color.White;
+            AjouterFRs.Location = new Point(18, 22);
+            AjouterFRs.Name = "AjouterFRs";
+            AjouterFRs.Size = new Size(104, 35);
+            AjouterFRs.TabIndex = 61;
+            AjouterFRs.Text = "Ajouter";
+            AjouterFRs.UseVisualStyleBackColor = false;
+            AjouterFRs.Click += AjouterFRs_Click;
+            // 
+            // ModifierFRs
+            // 
+            ModifierFRs.BackColor = Color.OliveDrab;
+            ModifierFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            ModifierFRs.ForeColor = Color.White;
+            ModifierFRs.Location = new Point(20, 82);
+            ModifierFRs.Name = "ModifierFRs";
+            ModifierFRs.Size = new Size(102, 34);
+            ModifierFRs.TabIndex = 60;
+            ModifierFRs.Text = "Modifier";
+            ModifierFRs.UseVisualStyleBackColor = false;
+            ModifierFRs.Click += ModifierFRs_Click;
+            // 
+            // SupprimerFRs
+            // 
+            SupprimerFRs.BackColor = Color.OliveDrab;
+            SupprimerFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SupprimerFRs.ForeColor = Color.White;
+            SupprimerFRs.Location = new Point(18, 149);
+            SupprimerFRs.Name = "SupprimerFRs";
+            SupprimerFRs.Size = new Size(104, 39);
+            SupprimerFRs.TabIndex = 59;
+            SupprimerFRs.Text = "supprimer";
+            SupprimerFRs.UseVisualStyleBackColor = false;
+            SupprimerFRs.Click += SupprimerFRs_Click;
+            // 
+            // ReinitialiserFRs
+            // 
+            ReinitialiserFRs.BackColor = Color.OliveDrab;
+            ReinitialiserFRs.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            ReinitialiserFRs.ForeColor = Color.White;
+            ReinitialiserFRs.Location = new Point(20, 206);
+            ReinitialiserFRs.Name = "ReinitialiserFRs";
+            ReinitialiserFRs.Size = new Size(102, 37);
+            ReinitialiserFRs.TabIndex = 58;
+            ReinitialiserFRs.Text = "Reinitialiser";
+            ReinitialiserFRs.UseVisualStyleBackColor = false;
+            ReinitialiserFRs.Click += ReinitialiserFRs_Click;
+            // 
+            // TextTelephoneFRs
+            // 
+            TextTelephoneFRs.AutoSize = true;
+            TextTelephoneFRs.BackColor = Color.OliveDrab;
+            TextTelephoneFRs.ForeColor = Color.White;
+            TextTelephoneFRs.Location = new Point(457, 23);
+            TextTelephoneFRs.Name = "TextTelephoneFRs";
+            TextTelephoneFRs.Size = new Size(61, 15);
+            TextTelephoneFRs.TabIndex = 57;
+            TextTelephoneFRs.Text = "Telephone";
+            // 
+            // ComboboxTeleFRs
+            // 
+            ComboboxTeleFRs.Location = new Point(438, 45);
+            ComboboxTeleFRs.Name = "ComboboxTeleFRs";
+            ComboboxTeleFRs.Size = new Size(118, 23);
+            ComboboxTeleFRs.TabIndex = 56;
+            // 
+            // AdresseClients
+            // 
+            AdresseClients.AutoSize = true;
+            AdresseClients.BackColor = Color.OliveDrab;
+            AdresseClients.ForeColor = Color.White;
+            AdresseClients.Location = new Point(911, 23);
+            AdresseClients.Name = "AdresseClients";
+            AdresseClients.Size = new Size(48, 15);
+            AdresseClients.TabIndex = 55;
+            AdresseClients.Text = "Adresse";
+            // 
+            // ComboboxAdresseFRs
+            // 
+            ComboboxAdresseFRs.Location = new Point(889, 44);
+            ComboboxAdresseFRs.Name = "ComboboxAdresseFRs";
+            ComboboxAdresseFRs.Size = new Size(115, 23);
+            ComboboxAdresseFRs.TabIndex = 54;
+            // 
+            // IF
+            // 
+            IF.AutoSize = true;
+            IF.BackColor = Color.OliveDrab;
+            IF.ForeColor = Color.White;
+            IF.Location = new Point(625, 23);
+            IF.Name = "IF";
+            IF.Size = new Size(16, 15);
+            IF.TabIndex = 53;
+            IF.Text = "IF";
+            // 
+            // ComboboxIFFRs
+            // 
+            ComboboxIFFRs.Location = new Point(587, 44);
+            ComboboxIFFRs.Name = "ComboboxIFFRs";
+            ComboboxIFFRs.Size = new Size(117, 23);
+            ComboboxIFFRs.TabIndex = 52;
+            // 
+            // ComboboxNomFRs
+            // 
+            ComboboxNomFRs.Location = new Point(267, 44);
+            ComboboxNomFRs.Name = "ComboboxNomFRs";
+            ComboboxNomFRs.Size = new Size(142, 23);
+            ComboboxNomFRs.TabIndex = 51;
+            // 
+            // TextNomFRs
+            // 
+            TextNomFRs.AutoSize = true;
+            TextNomFRs.BackColor = Color.OliveDrab;
+            TextNomFRs.ForeColor = Color.White;
+            TextNomFRs.Location = new Point(284, 23);
+            TextNomFRs.Name = "TextNomFRs";
+            TextNomFRs.Size = new Size(34, 15);
+            TextNomFRs.TabIndex = 50;
+            TextNomFRs.Text = "Nom";
+            // 
+            // ICE
+            // 
+            ICE.AutoSize = true;
+            ICE.BackColor = Color.OliveDrab;
+            ICE.ForeColor = Color.White;
+            ICE.Location = new Point(773, 23);
+            ICE.Name = "ICE";
+            ICE.Size = new Size(24, 15);
+            ICE.TabIndex = 49;
+            ICE.Text = "ICE";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(32, 373);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(66, 53);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 65;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
+            // 
             // Fournisseurs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(1044, 469);
             Controls.Add(pictureBox4);
             Controls.Add(ComboboxICEFRs);

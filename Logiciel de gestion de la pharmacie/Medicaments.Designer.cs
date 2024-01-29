@@ -73,6 +73,8 @@
             AjouterMedicament = new Button();
             StockMedicament = new Label();
             DgvMedicament = new Guna.UI2.WinForms.Guna2DataGridView();
+            textMedPrixV = new TextBox();
+            PrixV = new Label();
             MedNum = new DataGridViewTextBoxColumn();
             MedNom = new DataGridViewTextBoxColumn();
             MedPrixA = new DataGridViewTextBoxColumn();
@@ -86,10 +88,7 @@
             MedTpc = new DataGridViewTextBoxColumn();
             MedCodBa = new DataGridViewTextBoxColumn();
             IdFabrican = new DataGridViewTextBoxColumn();
-            MedPrixV = new TextBox();
-            PrixV = new Label();
-            label2 = new Label();
-            MedPhoto = new TextBox();
+            MedPrixV = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -101,7 +100,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkGray;
+            panel1.BackColor = Color.Khaki;
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(TitreTableaudeBordMedicament);
@@ -130,9 +129,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(75, 373);
+            pictureBox4.Location = new Point(53, 412);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 48);
+            pictureBox4.Size = new Size(69, 54);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 8;
             pictureBox4.TabStop = false;
@@ -142,7 +141,7 @@
             // 
             TitreTableaudeBordMedicament.AutoSize = true;
             TitreTableaudeBordMedicament.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TitreTableaudeBordMedicament.ForeColor = Color.ForestGreen;
+            TitreTableaudeBordMedicament.ForeColor = Color.OliveDrab;
             TitreTableaudeBordMedicament.Location = new Point(63, 304);
             TitreTableaudeBordMedicament.Name = "TitreTableaudeBordMedicament";
             TitreTableaudeBordMedicament.Size = new Size(128, 17);
@@ -165,7 +164,7 @@
             // 
             TitreFactureMedicament.AutoSize = true;
             TitreFactureMedicament.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TitreFactureMedicament.ForeColor = Color.ForestGreen;
+            TitreFactureMedicament.ForeColor = Color.OliveDrab;
             TitreFactureMedicament.Location = new Point(60, 203);
             TitreFactureMedicament.Name = "TitreFactureMedicament";
             TitreFactureMedicament.Size = new Size(90, 17);
@@ -187,9 +186,9 @@
             // TitreFabricantMedicament
             // 
             TitreFabricantMedicament.AutoSize = true;
-            TitreFabricantMedicament.BackColor = Color.DarkGray;
+            TitreFabricantMedicament.BackColor = Color.Khaki;
             TitreFabricantMedicament.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TitreFabricantMedicament.ForeColor = Color.ForestGreen;
+            TitreFabricantMedicament.ForeColor = Color.OliveDrab;
             TitreFabricantMedicament.Location = new Point(60, 123);
             TitreFabricantMedicament.Name = "TitreFabricantMedicament";
             TitreFabricantMedicament.Size = new Size(107, 17);
@@ -232,7 +231,7 @@
             // 
             // PrixAchatMedicament
             // 
-            PrixAchatMedicament.Location = new Point(374, 103);
+            PrixAchatMedicament.Location = new Point(467, 108);
             PrixAchatMedicament.Name = "PrixAchatMedicament";
             PrixAchatMedicament.Size = new Size(120, 23);
             PrixAchatMedicament.TabIndex = 11;
@@ -241,9 +240,9 @@
             // TextFabricantMedicament
             // 
             TextFabricantMedicament.AutoSize = true;
-            TextFabricantMedicament.BackColor = Color.ForestGreen;
+            TextFabricantMedicament.BackColor = Color.OliveDrab;
             TextFabricantMedicament.ForeColor = Color.White;
-            TextFabricantMedicament.Location = new Point(711, 82);
+            TextFabricantMedicament.Location = new Point(804, 87);
             TextFabricantMedicament.Name = "TextFabricantMedicament";
             TextFabricantMedicament.Size = new Size(56, 15);
             TextFabricantMedicament.TabIndex = 10;
@@ -251,18 +250,18 @@
             // 
             // NomMedicament
             // 
-            NomMedicament.Location = new Point(215, 103);
+            NomMedicament.Location = new Point(315, 108);
             NomMedicament.Name = "NomMedicament";
-            NomMedicament.Size = new Size(142, 23);
+            NomMedicament.Size = new Size(135, 23);
             NomMedicament.TabIndex = 13;
             NomMedicament.TextChanged += NomMedicament_TextChanged;
             // 
             // TextNomMedicament
             // 
             TextNomMedicament.AutoSize = true;
-            TextNomMedicament.BackColor = Color.ForestGreen;
+            TextNomMedicament.BackColor = Color.OliveDrab;
             TextNomMedicament.ForeColor = Color.White;
-            TextNomMedicament.Location = new Point(232, 82);
+            TextNomMedicament.Location = new Point(325, 87);
             TextNomMedicament.Name = "TextNomMedicament";
             TextNomMedicament.Size = new Size(34, 15);
             TextNomMedicament.TabIndex = 12;
@@ -271,7 +270,7 @@
             // 
             // QuantiteDisponibleMedicament
             // 
-            QuantiteDisponibleMedicament.Location = new Point(526, 103);
+            QuantiteDisponibleMedicament.Location = new Point(619, 108);
             QuantiteDisponibleMedicament.Name = "QuantiteDisponibleMedicament";
             QuantiteDisponibleMedicament.Size = new Size(117, 23);
             QuantiteDisponibleMedicament.TabIndex = 15;
@@ -279,9 +278,9 @@
             // TextPrixAchatMedicament
             // 
             TextPrixAchatMedicament.AutoSize = true;
-            TextPrixAchatMedicament.BackColor = Color.ForestGreen;
+            TextPrixAchatMedicament.BackColor = Color.OliveDrab;
             TextPrixAchatMedicament.ForeColor = Color.White;
-            TextPrixAchatMedicament.Location = new Point(390, 82);
+            TextPrixAchatMedicament.Location = new Point(483, 87);
             TextPrixAchatMedicament.Name = "TextPrixAchatMedicament";
             TextPrixAchatMedicament.Size = new Size(61, 15);
             TextPrixAchatMedicament.TabIndex = 14;
@@ -291,9 +290,9 @@
             // TextQuantiteDisponibleMedicament
             // 
             TextQuantiteDisponibleMedicament.AutoSize = true;
-            TextQuantiteDisponibleMedicament.BackColor = Color.ForestGreen;
+            TextQuantiteDisponibleMedicament.BackColor = Color.OliveDrab;
             TextQuantiteDisponibleMedicament.ForeColor = Color.White;
-            TextQuantiteDisponibleMedicament.Location = new Point(526, 82);
+            TextQuantiteDisponibleMedicament.Location = new Point(619, 87);
             TextQuantiteDisponibleMedicament.Name = "TextQuantiteDisponibleMedicament";
             TextQuantiteDisponibleMedicament.Size = new Size(112, 15);
             TextQuantiteDisponibleMedicament.TabIndex = 16;
@@ -302,7 +301,7 @@
             // FabricantMedicament
             // 
             FabricantMedicament.FormattingEnabled = true;
-            FabricantMedicament.Location = new Point(687, 103);
+            FabricantMedicament.Location = new Point(780, 108);
             FabricantMedicament.Name = "FabricantMedicament";
             FabricantMedicament.Size = new Size(121, 23);
             FabricantMedicament.TabIndex = 18;
@@ -311,9 +310,9 @@
             // TextDateExpirationMedicament
             // 
             TextDateExpirationMedicament.AutoSize = true;
-            TextDateExpirationMedicament.BackColor = Color.ForestGreen;
+            TextDateExpirationMedicament.BackColor = Color.OliveDrab;
             TextDateExpirationMedicament.ForeColor = Color.White;
-            TextDateExpirationMedicament.Location = new Point(412, 147);
+            TextDateExpirationMedicament.Location = new Point(585, 142);
             TextDateExpirationMedicament.Name = "TextDateExpirationMedicament";
             TextDateExpirationMedicament.Size = new Size(87, 15);
             TextDateExpirationMedicament.TabIndex = 19;
@@ -323,7 +322,7 @@
             // DateExpirationMedicament
             // 
             DateExpirationMedicament.Format = DateTimePickerFormat.Short;
-            DateExpirationMedicament.Location = new Point(401, 169);
+            DateExpirationMedicament.Location = new Point(574, 164);
             DateExpirationMedicament.Name = "DateExpirationMedicament";
             DateExpirationMedicament.Size = new Size(114, 23);
             DateExpirationMedicament.TabIndex = 20;
@@ -332,9 +331,9 @@
             // TextQuantiteMinimaleMedicament
             // 
             TextQuantiteMinimaleMedicament.AutoSize = true;
-            TextQuantiteMinimaleMedicament.BackColor = Color.ForestGreen;
+            TextQuantiteMinimaleMedicament.BackColor = Color.OliveDrab;
             TextQuantiteMinimaleMedicament.ForeColor = Color.White;
-            TextQuantiteMinimaleMedicament.Location = new Point(839, 82);
+            TextQuantiteMinimaleMedicament.Location = new Point(932, 87);
             TextQuantiteMinimaleMedicament.Name = "TextQuantiteMinimaleMedicament";
             TextQuantiteMinimaleMedicament.Size = new Size(106, 15);
             TextQuantiteMinimaleMedicament.TabIndex = 25;
@@ -342,7 +341,7 @@
             // 
             // QuantiteMinimaleMedicament
             // 
-            QuantiteMinimaleMedicament.Location = new Point(837, 103);
+            QuantiteMinimaleMedicament.Location = new Point(930, 108);
             QuantiteMinimaleMedicament.Name = "QuantiteMinimaleMedicament";
             QuantiteMinimaleMedicament.Size = new Size(115, 23);
             QuantiteMinimaleMedicament.TabIndex = 24;
@@ -350,27 +349,29 @@
             // TextDesignationMedicament
             // 
             TextDesignationMedicament.AutoSize = true;
-            TextDesignationMedicament.BackColor = Color.ForestGreen;
+            TextDesignationMedicament.BackColor = Color.OliveDrab;
             TextDesignationMedicament.ForeColor = Color.White;
-            TextDesignationMedicament.Location = new Point(558, 148);
+            TextDesignationMedicament.Location = new Point(731, 143);
             TextDesignationMedicament.Name = "TextDesignationMedicament";
             TextDesignationMedicament.Size = new Size(70, 15);
             TextDesignationMedicament.TabIndex = 27;
             TextDesignationMedicament.Text = "Désignation";
+            TextDesignationMedicament.Click += TextDesignationMedicament_Click;
             // 
             // DesignationMedicament
             // 
-            DesignationMedicament.Location = new Point(539, 170);
+            DesignationMedicament.Location = new Point(712, 165);
             DesignationMedicament.Name = "DesignationMedicament";
             DesignationMedicament.Size = new Size(118, 23);
             DesignationMedicament.TabIndex = 26;
+            DesignationMedicament.TextChanged += DesignationMedicament_TextChanged;
             // 
             // TextUtilisationsMedicament
             // 
             TextUtilisationsMedicament.AutoSize = true;
-            TextUtilisationsMedicament.BackColor = Color.ForestGreen;
+            TextUtilisationsMedicament.BackColor = Color.OliveDrab;
             TextUtilisationsMedicament.ForeColor = Color.White;
-            TextUtilisationsMedicament.Location = new Point(688, 153);
+            TextUtilisationsMedicament.Location = new Point(861, 148);
             TextUtilisationsMedicament.Name = "TextUtilisationsMedicament";
             TextUtilisationsMedicament.Size = new Size(65, 15);
             TextUtilisationsMedicament.TabIndex = 29;
@@ -378,17 +379,18 @@
             // 
             // UtilisationsMedicament
             // 
-            UtilisationsMedicament.Location = new Point(673, 171);
+            UtilisationsMedicament.Location = new Point(846, 166);
             UtilisationsMedicament.Name = "UtilisationsMedicament";
             UtilisationsMedicament.Size = new Size(115, 23);
             UtilisationsMedicament.TabIndex = 28;
+            UtilisationsMedicament.TextChanged += UtilisationsMedicament_TextChanged;
             // 
             // TextContreIndicationMedicament
             // 
             TextContreIndicationMedicament.AutoSize = true;
-            TextContreIndicationMedicament.BackColor = Color.ForestGreen;
+            TextContreIndicationMedicament.BackColor = Color.OliveDrab;
             TextContreIndicationMedicament.ForeColor = Color.White;
-            TextContreIndicationMedicament.Location = new Point(223, 210);
+            TextContreIndicationMedicament.Location = new Point(407, 212);
             TextContreIndicationMedicament.Name = "TextContreIndicationMedicament";
             TextContreIndicationMedicament.Size = new Size(106, 15);
             TextContreIndicationMedicament.TabIndex = 31;
@@ -396,7 +398,7 @@
             // 
             // ContreIndicationMedicament
             // 
-            ContreIndicationMedicament.Location = new Point(218, 233);
+            ContreIndicationMedicament.Location = new Point(402, 235);
             ContreIndicationMedicament.Name = "ContreIndicationMedicament";
             ContreIndicationMedicament.Size = new Size(122, 23);
             ContreIndicationMedicament.TabIndex = 30;
@@ -404,9 +406,9 @@
             // TextEffetsSecondairesMedicament
             // 
             TextEffetsSecondairesMedicament.AutoSize = true;
-            TextEffetsSecondairesMedicament.BackColor = Color.ForestGreen;
+            TextEffetsSecondairesMedicament.BackColor = Color.OliveDrab;
             TextEffetsSecondairesMedicament.ForeColor = Color.White;
-            TextEffetsSecondairesMedicament.Location = new Point(368, 209);
+            TextEffetsSecondairesMedicament.Location = new Point(552, 211);
             TextEffetsSecondairesMedicament.Name = "TextEffetsSecondairesMedicament";
             TextEffetsSecondairesMedicament.Size = new Size(104, 15);
             TextEffetsSecondairesMedicament.TabIndex = 33;
@@ -414,7 +416,7 @@
             // 
             // EffetsSecondairesMedicament
             // 
-            EffetsSecondairesMedicament.Location = new Point(353, 231);
+            EffetsSecondairesMedicament.Location = new Point(537, 233);
             EffetsSecondairesMedicament.Name = "EffetsSecondairesMedicament";
             EffetsSecondairesMedicament.Size = new Size(142, 23);
             EffetsSecondairesMedicament.TabIndex = 32;
@@ -422,9 +424,9 @@
             // TextTauxDePriseEnChargeMedicament
             // 
             TextTauxDePriseEnChargeMedicament.AutoSize = true;
-            TextTauxDePriseEnChargeMedicament.BackColor = Color.ForestGreen;
+            TextTauxDePriseEnChargeMedicament.BackColor = Color.OliveDrab;
             TextTauxDePriseEnChargeMedicament.ForeColor = Color.White;
-            TextTauxDePriseEnChargeMedicament.Location = new Point(525, 209);
+            TextTauxDePriseEnChargeMedicament.Location = new Point(709, 211);
             TextTauxDePriseEnChargeMedicament.Name = "TextTauxDePriseEnChargeMedicament";
             TextTauxDePriseEnChargeMedicament.Size = new Size(130, 15);
             TextTauxDePriseEnChargeMedicament.TabIndex = 35;
@@ -432,7 +434,7 @@
             // 
             // TauxDePriseEnChargeMedicament
             // 
-            TauxDePriseEnChargeMedicament.Location = new Point(520, 231);
+            TauxDePriseEnChargeMedicament.Location = new Point(704, 233);
             TauxDePriseEnChargeMedicament.Name = "TauxDePriseEnChargeMedicament";
             TauxDePriseEnChargeMedicament.Size = new Size(142, 23);
             TauxDePriseEnChargeMedicament.TabIndex = 34;
@@ -440,9 +442,9 @@
             // TextCodeABarresMedicament
             // 
             TextCodeABarresMedicament.AutoSize = true;
-            TextCodeABarresMedicament.BackColor = Color.ForestGreen;
+            TextCodeABarresMedicament.BackColor = Color.OliveDrab;
             TextCodeABarresMedicament.ForeColor = Color.White;
-            TextCodeABarresMedicament.Location = new Point(704, 209);
+            TextCodeABarresMedicament.Location = new Point(888, 211);
             TextCodeABarresMedicament.Name = "TextCodeABarresMedicament";
             TextCodeABarresMedicament.Size = new Size(79, 15);
             TextCodeABarresMedicament.TabIndex = 37;
@@ -450,19 +452,19 @@
             // 
             // CodeABarresMedicament
             // 
-            CodeABarresMedicament.Location = new Point(687, 228);
+            CodeABarresMedicament.Location = new Point(871, 230);
             CodeABarresMedicament.Name = "CodeABarresMedicament";
             CodeABarresMedicament.Size = new Size(142, 23);
             CodeABarresMedicament.TabIndex = 36;
             // 
             // ReinitialiserMedicament
             // 
-            ReinitialiserMedicament.BackColor = Color.ForestGreen;
+            ReinitialiserMedicament.BackColor = Color.OliveDrab;
             ReinitialiserMedicament.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ReinitialiserMedicament.ForeColor = Color.White;
-            ReinitialiserMedicament.Location = new Point(704, 262);
+            ReinitialiserMedicament.Location = new Point(215, 225);
             ReinitialiserMedicament.Name = "ReinitialiserMedicament";
-            ReinitialiserMedicament.Size = new Size(98, 28);
+            ReinitialiserMedicament.Size = new Size(98, 33);
             ReinitialiserMedicament.TabIndex = 38;
             ReinitialiserMedicament.Text = "Reinitialiser";
             ReinitialiserMedicament.UseVisualStyleBackColor = false;
@@ -470,12 +472,12 @@
             // 
             // SupprimerMedicament
             // 
-            SupprimerMedicament.BackColor = Color.ForestGreen;
+            SupprimerMedicament.BackColor = Color.OliveDrab;
             SupprimerMedicament.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SupprimerMedicament.ForeColor = Color.White;
-            SupprimerMedicament.Location = new Point(605, 263);
+            SupprimerMedicament.Location = new Point(214, 169);
             SupprimerMedicament.Name = "SupprimerMedicament";
-            SupprimerMedicament.Size = new Size(84, 28);
+            SupprimerMedicament.Size = new Size(99, 33);
             SupprimerMedicament.TabIndex = 39;
             SupprimerMedicament.Text = "supprimer";
             SupprimerMedicament.UseVisualStyleBackColor = false;
@@ -483,12 +485,12 @@
             // 
             // ModifierMedicamaent
             // 
-            ModifierMedicamaent.BackColor = Color.ForestGreen;
+            ModifierMedicamaent.BackColor = Color.OliveDrab;
             ModifierMedicamaent.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             ModifierMedicamaent.ForeColor = Color.White;
-            ModifierMedicamaent.Location = new Point(505, 263);
+            ModifierMedicamaent.Location = new Point(215, 112);
             ModifierMedicamaent.Name = "ModifierMedicamaent";
-            ModifierMedicamaent.Size = new Size(83, 28);
+            ModifierMedicamaent.Size = new Size(94, 40);
             ModifierMedicamaent.TabIndex = 40;
             ModifierMedicamaent.Text = "Modifier";
             ModifierMedicamaent.UseVisualStyleBackColor = false;
@@ -496,12 +498,12 @@
             // 
             // AjouterMedicament
             // 
-            AjouterMedicament.BackColor = Color.ForestGreen;
+            AjouterMedicament.BackColor = Color.OliveDrab;
             AjouterMedicament.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             AjouterMedicament.ForeColor = Color.White;
-            AjouterMedicament.Location = new Point(409, 262);
+            AjouterMedicament.Location = new Point(214, 62);
             AjouterMedicament.Name = "AjouterMedicament";
-            AjouterMedicament.Size = new Size(90, 29);
+            AjouterMedicament.Size = new Size(95, 31);
             AjouterMedicament.TabIndex = 41;
             AjouterMedicament.Text = "Ajouter";
             AjouterMedicament.UseVisualStyleBackColor = false;
@@ -512,7 +514,7 @@
             StockMedicament.AutoSize = true;
             StockMedicament.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             StockMedicament.ForeColor = Color.ForestGreen;
-            StockMedicament.Location = new Point(534, 300);
+            StockMedicament.Location = new Point(537, 279);
             StockMedicament.Name = "StockMedicament";
             StockMedicament.Size = new Size(176, 22);
             StockMedicament.TabIndex = 42;
@@ -523,6 +525,7 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.ForeColor = Color.Black;
             DgvMedicament.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            DgvMedicament.BackgroundColor = Color.Khaki;
             DgvMedicament.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -534,7 +537,7 @@
             DgvMedicament.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             DgvMedicament.ColumnHeadersHeight = 20;
             DgvMedicament.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            DgvMedicament.Columns.AddRange(new DataGridViewColumn[] { MedNum, MedNom, MedPrixA, MedQteM, MedExp, MedDesig, MedQteD, MedUtili, MedContInd, MedEffet, MedTpc, MedCodBa, IdFabrican });
+            DgvMedicament.Columns.AddRange(new DataGridViewColumn[] { MedNum, MedNom, MedPrixA, MedQteM, MedExp, MedDesig, MedQteD, MedUtili, MedContInd, MedEffet, MedTpc, MedCodBa, IdFabrican, MedPrixV });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -544,20 +547,20 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DgvMedicament.DefaultCellStyle = dataGridViewCellStyle3;
             DgvMedicament.GridColor = Color.FromArgb(231, 229, 255);
-            DgvMedicament.Location = new Point(215, 334);
+            DgvMedicament.Location = new Point(215, 304);
             DgvMedicament.MultiSelect = false;
             DgvMedicament.Name = "DgvMedicament";
             DgvMedicament.ReadOnly = true;
             DgvMedicament.RowHeadersVisible = false;
             DgvMedicament.RowTemplate.Height = 25;
-            DgvMedicament.Size = new Size(814, 210);
+            DgvMedicament.Size = new Size(840, 240);
             DgvMedicament.TabIndex = 82;
             DgvMedicament.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             DgvMedicament.ThemeStyle.AlternatingRowsStyle.Font = null;
             DgvMedicament.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             DgvMedicament.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             DgvMedicament.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DgvMedicament.ThemeStyle.BackColor = Color.White;
+            DgvMedicament.ThemeStyle.BackColor = Color.Khaki;
             DgvMedicament.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             DgvMedicament.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             DgvMedicament.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -574,6 +577,26 @@
             DgvMedicament.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             DgvMedicament.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             DgvMedicament.CellContentClick += DgvMedicament_CellContentClick;
+            // 
+            // textMedPrixV
+            // 
+            textMedPrixV.Location = new Point(396, 164);
+            textMedPrixV.Name = "textMedPrixV";
+            textMedPrixV.Size = new Size(142, 23);
+            textMedPrixV.TabIndex = 84;
+            textMedPrixV.TextChanged += MedPrixV_TextChanged;
+            // 
+            // PrixV
+            // 
+            PrixV.AutoSize = true;
+            PrixV.BackColor = Color.OliveDrab;
+            PrixV.ForeColor = Color.White;
+            PrixV.Location = new Point(413, 143);
+            PrixV.Name = "PrixV";
+            PrixV.Size = new Size(59, 15);
+            PrixV.TabIndex = 83;
+            PrixV.Text = "Prix Vente";
+            PrixV.Click += PrixV_Click;
             // 
             // MedNum
             // 
@@ -669,49 +692,18 @@
             // 
             // MedPrixV
             // 
-            MedPrixV.Location = new Point(223, 169);
+            MedPrixV.DataPropertyName = "MedPrixV";
+            MedPrixV.HeaderText = "Prix vente";
             MedPrixV.Name = "MedPrixV";
-            MedPrixV.Size = new Size(142, 23);
-            MedPrixV.TabIndex = 84;
-            // 
-            // PrixV
-            // 
-            PrixV.AutoSize = true;
-            PrixV.BackColor = Color.ForestGreen;
-            PrixV.ForeColor = Color.White;
-            PrixV.Location = new Point(240, 148);
-            PrixV.Name = "PrixV";
-            PrixV.Size = new Size(59, 15);
-            PrixV.TabIndex = 83;
-            PrixV.Text = "Prix Vente";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.ForestGreen;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(821, 153);
-            label2.Name = "label2";
-            label2.Size = new Size(41, 15);
-            label2.TabIndex = 86;
-            label2.Text = "PHoto";
-            // 
-            // MedPhoto
-            // 
-            MedPhoto.Location = new Point(806, 171);
-            MedPhoto.Name = "MedPhoto";
-            MedPhoto.Size = new Size(115, 23);
-            MedPhoto.TabIndex = 85;
+            MedPrixV.ReadOnly = true;
             // 
             // Medicaments
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(1058, 547);
-            Controls.Add(label2);
-            Controls.Add(MedPhoto);
-            Controls.Add(MedPrixV);
+            BackColor = Color.DarkKhaki;
+            ClientSize = new Size(1069, 547);
+            Controls.Add(textMedPrixV);
             Controls.Add(PrixV);
             Controls.Add(DgvMedicament);
             Controls.Add(StockMedicament);
@@ -810,10 +802,8 @@
         private Button AjouterMedicament;
         private Label StockMedicament;
         private Guna.UI2.WinForms.Guna2DataGridView DgvMedicament;
-        private TextBox MedPrixV;
+        private TextBox textMedPrixV;
         private Label PrixV;
-        private Label label2;
-        private TextBox MedPhoto;
         private DataGridViewTextBoxColumn MedNum;
         private DataGridViewTextBoxColumn MedNom;
         private DataGridViewTextBoxColumn MedPrixA;
@@ -827,6 +817,7 @@
         private DataGridViewTextBoxColumn MedTpc;
         private DataGridViewTextBoxColumn MedCodBa;
         private DataGridViewTextBoxColumn IdFabrican;
+        private DataGridViewTextBoxColumn MedPrixV;
         //private Label label2;
         //private PictureBox insertionPictureMedicament;
     }

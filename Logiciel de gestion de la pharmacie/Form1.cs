@@ -32,5 +32,12 @@ namespace Logiciel_de_gestion_de_la_pharmacie
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Inscription inscription = new Inscription();
+            inscription.Show();
+            this.Hide();
+        }
     }
 }

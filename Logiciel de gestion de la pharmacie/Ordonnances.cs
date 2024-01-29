@@ -76,13 +76,13 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             {
                 conn.Open();
 
-                string Req = "UPDATE Ordonnances SET NCNSS=@NumeroCNSS, Datedupatient=@Datedupatient,  Nommedecin=@Nomdumedecin, DateOrd=@DateOrd WHERE NumOrd=@Cle;";
+                string Req = "UPDATE Ordonnances SET NCNSS=@NumeroCNSS, Nomdupatient=@Nomdupatient,  Nommedecin=@Nomdumedecin, DateOrd=@DateOrd WHERE NumOrd=@Cle;";
 
                 SqlCommand cmd = new SqlCommand(Req, conn);
                 cmd.Parameters.AddWithValue("@NumeroCNSS", TextNCNSS.Text);
-                cmd.Parameters.AddWithValue("@Datedupatient", TextNomdupatient.Text);
+                cmd.Parameters.AddWithValue("@Nomdupatient", TextNomdupatient.Text);
                 cmd.Parameters.AddWithValue("@Nomdumedecin", TextNommedecin.Text);
-                cmd.Parameters.AddWithValue("@DateOrd", TextDateOrd.Text);
+                cmd.Parameters.AddWithValue("@DateOrd", TextDateOrd.Value.Date);
                 cmd.Parameters.AddWithValue("@Cle", Cle);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Ordonnances Modifié Avec Succes");

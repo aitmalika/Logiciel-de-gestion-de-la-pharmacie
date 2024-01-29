@@ -105,5 +105,19 @@ namespace Logiciel_de_gestion_de_la_pharmacie
             Ordonnances.Show();
             this.Hide();
         }
+
+        private void buttondeconecter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AfficherDateHeure_Click(object sender, EventArgs e)
+        {
+            // Obtenez la date et l'heure actuelles
+            DateTime dateHeureActuelles = DateTime.Now;
+
+            // Affichez la date et l'heure dans votre Label
+            label3.Text = dateHeureActuelles.ToString("dd/MM/yyyy HH:mm:ss");
+        }
     }
 }
